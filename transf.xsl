@@ -5,22 +5,15 @@
 <xsl:variable name="uppercase" select="'ABCDEFGHIJKLMNOPQRSTUVWXYZ'" />
 
 <xsl:template match="/">
-/**
- *
- * MODEL DATA
- *
- */	
 
-<!-- <xsl:for-each select="ADOXML/MODELS/MODEL/MODELATTRIBUTES/ATTRIBUTE">
-relations_number(<xsl:value-of select="@name='Number of objects and relations'"/>)
-</xsl:for-each> -->
-
-<xsl:for-each select="ADOXML/MODELS/MODEL/INSTANCE">
 /**
  *
  * Instance
  *
  */
+
+ <xsl:for-each select="ADOXML/MODELS/MODEL/INSTANCE">
+
 <xsl:variable name="instance_name" select="translate(
 							      	translate(
 							      	@name, $uppercase, $smallcase),' ','_')"/>
@@ -121,12 +114,14 @@ has_variable_type(<xsl:value-of select="concat($instance_name,',', $attrib)"/>)
 							      	TO/@instance, $uppercase, $smallcase),' ','_')"/>
 subsequent(<xsl:value-of select="concat($from,',', $to)"/>)
 <xsl:variable name="attrib" select="ATTRIBUTE[@name='Denomination']"/>
+<xsl:if test="$attrib">
 <xsl:choose>
 		 <xsl:when test="$attrib">
 denomination_from_to(<xsl:value-of select="concat($from,',', $to,',', $attrib)"/>)
 		 </xsl:when>
 		 <xsl:otherwise></xsl:otherwise>
 </xsl:choose>
+</xsl:if>
 </xsl:for-each>
 </xsl:template>
 

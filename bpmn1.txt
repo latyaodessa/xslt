@@ -1,12 +1,4 @@
 
-/**
- *
- * MODEL DATA
- *
- */	
-
-
-
 
 /**
  *
@@ -14,13 +6,8 @@
  *
  */
 
+ 
 instance_type(check-in_process_airport,start_event)
-
-/**
- *
- * Instance
- *
- */
 
 instance_type(online_check-in_already_completed?,exclusive_gateway)
 
@@ -28,12 +15,6 @@ has_variable_scope(online_check-in_already_completed?,global)
 		 
 has_variable_type(online_check-in_already_completed?,enumeration)
 		 
-/**
- *
- * Instance
- *
- */
-
 instance_type(conduct_check-in_at_check-in_machine,task)
 
 has_priority(conduct_check-in_at_check-in_machine,10)
@@ -54,24 +35,12 @@ has_max_start_period(conduct_check-in_at_check-in_machine,00:001:00:00:00)
 		 
 has_start_quantity(conduct_check-in_at_check-in_machine,1)
 		 
-/**
- *
- * Instance
- *
- */
-
 instance_type(extra_baggage_in_addition_to_hand_luggage?,exclusive_gateway)
 
 has_variable_scope(extra_baggage_in_addition_to_hand_luggage?,global)
 		 
 has_variable_type(extra_baggage_in_addition_to_hand_luggage?,enumeration)
 		 
-/**
- *
- * Instance
- *
- */
-
 instance_type(queue_in_for_baggage_drop-off,task)
 
 has_priority(queue_in_for_baggage_drop-off,10)
@@ -92,24 +61,12 @@ has_max_start_period(queue_in_for_baggage_drop-off,00:001:00:00:00)
 		 
 has_start_quantity(queue_in_for_baggage_drop-off,1)
 		 
-/**
- *
- * Instance
- *
- */
-
 instance_type(baggage_included_in_ticket?,exclusive_gateway)
 
 has_variable_scope(baggage_included_in_ticket?,global)
 		 
 has_variable_type(baggage_included_in_ticket?,enumeration)
 		 
-/**
- *
- * Instance
- *
- */
-
 instance_type(agent_fixes_baggage_stickers,task)
 
 has_priority(agent_fixes_baggage_stickers,10)
@@ -130,12 +87,6 @@ has_max_start_period(agent_fixes_baggage_stickers,00:001:00:00:00)
 		 
 has_start_quantity(agent_fixes_baggage_stickers,1)
 		 
-/**
- *
- * Instance
- *
- */
-
 instance_type(agent_transfers_baggage_to_conveyor,task)
 
 has_priority(agent_transfers_baggage_to_conveyor,10)
@@ -156,12 +107,6 @@ has_max_start_period(agent_transfers_baggage_to_conveyor,00:001:00:00:00)
 		 
 has_start_quantity(agent_transfers_baggage_to_conveyor,1)
 		 
-/**
- *
- * Instance
- *
- */
-
 instance_type(agent_calculates_extra_price,task)
 
 has_priority(agent_calculates_extra_price,10)
@@ -182,36 +127,18 @@ has_max_start_period(agent_calculates_extra_price,00:001:00:00:00)
 		 
 has_start_quantity(agent_calculates_extra_price,1)
 		 
-/**
- *
- * Instance
- *
- */
-
 instance_type(purchase_of_baggage_possible?,exclusive_gateway)
 
 has_variable_scope(purchase_of_baggage_possible?,global)
 		 
 has_variable_type(purchase_of_baggage_possible?,enumeration)
 		 
-/**
- *
- * Instance
- *
- */
-
 instance_type(customer_wants_to_purchase_extra_bag?,exclusive_gateway)
 
 has_variable_scope(customer_wants_to_purchase_extra_bag?,global)
 		 
 has_variable_type(customer_wants_to_purchase_extra_bag?,enumeration)
 		 
-/**
- *
- * Instance
- *
- */
-
 instance_type(customer_conducts_payment,task)
 
 has_priority(customer_conducts_payment,10)
@@ -232,12 +159,6 @@ has_max_start_period(customer_conducts_payment,00:001:00:00:00)
 		 
 has_start_quantity(customer_conducts_payment,1)
 		 
-/**
- *
- * Instance
- *
- */
-
 instance_type(agent_checks_boarding_pass_&_id,task)
 
 has_priority(agent_checks_boarding_pass_&_id,10)
@@ -258,35 +179,11 @@ has_max_start_period(agent_checks_boarding_pass_&_id,00:001:00:00:00)
 		 
 has_start_quantity(agent_checks_boarding_pass_&_id,1)
 		 
-/**
- *
- * Instance
- *
- */
-
 instance_type(check-in_with_baggage_successfully_completed,end_event)
-
-/**
- *
- * Instance
- *
- */
 
 instance_type(check-in_completed_without_extra_baggage,end_event)
 
-/**
- *
- * Instance
- *
- */
-
 instance_type(check-in_completed_without_extra_baggage,_customer_not_willing_to_pay,end_event)
-
-/**
- *
- * Instance
- *
- */
 
 instance_type(check-in_completed,end_event)
 
