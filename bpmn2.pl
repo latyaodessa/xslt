@@ -459,3 +459,5 @@ show_time_atr(A):- instance_type(A,Class),
 										write('Max_start '), write(Max_start), nl,
 										write('Max_wait '), write(Max_wait), nl.
 
+path_exist(A,B):- subsequent(A,B).										
+path_exist(A,B):- subsequent(A,Z), path_exist(Z,B).
