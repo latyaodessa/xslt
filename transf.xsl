@@ -127,12 +127,14 @@ has_variable_type(<xsl:value-of select="concat($instance_name,',', $attrib)"/>).
  */	
 <xsl:variable name="from" select="translate(
 								translate(
+								translate(
 							      	translate(
-							      	FROM/@instance, $uppercase, $smallcase),' ','_'),'?','')"/>
+							      	FROM/@instance, $uppercase, $smallcase),'&amp;',''),' ','_'),'?','')"/>
 <xsl:variable name="to" select="translate(
+								translate(
 									translate(
 							      	translate(
-							      	TO/@instance, $uppercase, $smallcase),' ','_'),'?','')"/>
+							      	TO/@instance, $uppercase, $smallcase),'&amp;',''),' ','_'),'?','')"/>
 subsequent(<xsl:value-of select="concat($from,',', $to)"/>).
 <xsl:variable name="attrib" select="ATTRIBUTE[@name='Denomination']"/>
 <xsl:if test="$attrib != ''">

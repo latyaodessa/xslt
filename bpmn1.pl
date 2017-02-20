@@ -297,7 +297,7 @@ denomination_from_to(extra_baggage_in_addition_to_hand_luggage,queue_in_for_bagg
  *
  */	
 
-subsequent(queue_in_for_baggage_drop-off,agent_checks_boarding_pass_&_id).
+subsequent(queue_in_for_baggage_drop-off,agent_checks_boarding_pass__id).
 
 /**
  *
@@ -351,7 +351,7 @@ denomination_from_to(purchase_of_baggage_possible,customer_wants_to_purchase_ext
  *
  */	
 
-subsequent(agent_checks_boarding_pass_&_id,baggage_included_in_ticket).
+subsequent(agent_checks_boarding_pass__id,baggage_included_in_ticket).
 
 /**
  *
@@ -437,5 +437,4 @@ show_time_atr(A):- instance_type(A,Class),
 										write('Waiting '), write(Waiting), nl,
 										write('Transport '), write(Transport), nl,
 										write('Max_start '), write(Max_start), nl,
-										write('Max_wait '), write(Max_wait), nl.
-
+										write('Max_wait '), write(Max_wait), nl.										
