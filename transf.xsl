@@ -14,9 +14,12 @@
 
  <xsl:for-each select="ADOXML/MODELS/MODEL/INSTANCE">
 
-<xsl:variable name="instance_name" select="translate(
+<xsl:variable name="instance_name" select="
+									translate(
+									translate(
+									translate(
 							      	translate(
-							      	@name, $uppercase, $smallcase),' ','_')"/>
+							      	@name, $uppercase, $smallcase),'&amp;',''),'?',''),' ','_')"/>
 
 <xsl:variable name="class" select="translate(
 							      	translate(
@@ -29,49 +32,49 @@ has_priority(<xsl:value-of select="concat($instance_name,',', $attrib)"/>).
 		 </xsl:when>
 		 <xsl:otherwise></xsl:otherwise>
 </xsl:choose>
-<xsl:variable name="attrib" select="ATTRIBUTE[@name='Execution time']"/>
+<xsl:variable name="attrib" select="translate(ATTRIBUTE[@name='Execution time'],':','_')"/>
 <xsl:choose>
 		 <xsl:when test="$attrib">
 has_execution_time(<xsl:value-of select="concat($instance_name,',', $attrib)"/>).
 		 </xsl:when>
 		 <xsl:otherwise></xsl:otherwise>
 </xsl:choose>
-<xsl:variable name="attrib" select="ATTRIBUTE[@name='Waiting time']"/>
+<xsl:variable name="attrib" select="translate(ATTRIBUTE[@name='Waiting time'],':','_')"/>
 <xsl:choose>
 		 <xsl:when test="$attrib">
 has_waiting_time(<xsl:value-of select="concat($instance_name,',', $attrib)"/>).
 		 </xsl:when>
 		 <xsl:otherwise></xsl:otherwise>
 </xsl:choose>
-<xsl:variable name="attrib" select="ATTRIBUTE[@name='Resting time']"/>
+<xsl:variable name="attrib" select="translate(ATTRIBUTE[@name='Resting time'],':','_')"/>
 <xsl:choose>
 		 <xsl:when test="$attrib">
 has_resting_time(<xsl:value-of select="concat($instance_name,',', $attrib)"/>).
 		 </xsl:when>
 		 <xsl:otherwise></xsl:otherwise>
 </xsl:choose>
-<xsl:variable name="attrib" select="ATTRIBUTE[@name='Transport time']"/>
+<xsl:variable name="attrib" select="translate(ATTRIBUTE[@name='Transport time'],':','_')"/>
 <xsl:choose>
 		 <xsl:when test="$attrib">
 has_transport_time(<xsl:value-of select="concat($instance_name,',', $attrib)"/>).
 		 </xsl:when>
 		 <xsl:otherwise></xsl:otherwise>
 </xsl:choose>
-<xsl:variable name="attrib" select="ATTRIBUTE[@name='Max. resource waiting time']"/>
+<xsl:variable name="attrib" select="translate(ATTRIBUTE[@name='Max. resource waiting time'],':','_')"/>
 <xsl:choose>
 		 <xsl:when test="$attrib">
 has_max_resource_waiting_time(<xsl:value-of select="concat($instance_name,',', $attrib)"/>).
 		 </xsl:when>
 		 <xsl:otherwise></xsl:otherwise>
 </xsl:choose>
-<xsl:variable name="attrib" select="ATTRIBUTE[@name='Min. quota of presence']"/>
+<xsl:variable name="attrib" select="translate(ATTRIBUTE[@name='Min. quota of presence'],':','_')"/>
 <xsl:choose>
 		 <xsl:when test="$attrib">
 has_min_quota_of_presence(<xsl:value-of select="concat($instance_name,',', $attrib)"/>).
 		 </xsl:when>
 		 <xsl:otherwise></xsl:otherwise>
 </xsl:choose>
-<xsl:variable name="attrib" select="ATTRIBUTE[@name='Max. start period']"/>
+<xsl:variable name="attrib" select="translate(ATTRIBUTE[@name='Max. start period'],':','_')"/>
 <xsl:choose>
 		 <xsl:when test="$attrib">
 has_max_start_period(<xsl:value-of select="concat($instance_name,',', $attrib)"/>).
@@ -114,14 +117,16 @@ has_variable_type(<xsl:value-of select="concat($instance_name,',', $attrib)"/>).
  *
  */	
 <xsl:variable name="from" select="translate(
+								translate(
 							      	translate(
-							      	FROM/@instance, $uppercase, $smallcase),' ','_')"/>
+							      	FROM/@instance, $uppercase, $smallcase),' ','_'),'?','')"/>
 <xsl:variable name="to" select="translate(
+									translate(
 							      	translate(
-							      	TO/@instance, $uppercase, $smallcase),' ','_')"/>
+							      	TO/@instance, $uppercase, $smallcase),' ','_'),'?','')"/>
 subsequent(<xsl:value-of select="concat($from,',', $to)"/>).
 <xsl:variable name="attrib" select="ATTRIBUTE[@name='Denomination']"/>
-<xsl:if test="$attrib">
+<xsl:if test="$attrib != ''">
 <xsl:choose>
 		 <xsl:when test="$attrib">
 denomination_from_to(<xsl:value-of select="concat($from,',', $to,',', $attrib)"/>).
@@ -130,6 +135,27 @@ denomination_from_to(<xsl:value-of select="concat($from,',', $to,',', $attrib)"/
 </xsl:choose>
 </xsl:if>
 </xsl:for-each>
-</xsl:template>
 
+/**
+ *
+ * RULES
+ *
+ */	
+
+show_time_atr(A):- instance_type(A,Class), 
+										has_execution_time(A,Execution), 
+										has_waiting_time(A,Waiting), 
+										has_resting_time(A,Resting), 
+										has_transport_time(A,Transport),
+										has_max_resource_waiting_time(A,Max_wait),
+										has_max_start_period(A,Max_start),
+										write('Instance '), write(A), nl,
+										write('Class '), write(Class), nl,
+										write('Execution '), write(Execution), nl,
+										write('Waiting '), write(Waiting), nl,
+										write('Transport '), write(Transport), nl,
+										write('Max_start '), write(Max_start), nl,
+										write('Max_wait '), write(Max_wait), nl.
+
+</xsl:template>
 </xsl:stylesheet>
