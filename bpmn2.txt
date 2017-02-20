@@ -1,12 +1,4 @@
 
-/**
- *
- * MODEL DATA
- *
- */	
-
-
-
 
 /**
  *
@@ -14,13 +6,8 @@
  *
  */
 
+ 
 instance_type(consult_physician,start_event)
-
-/**
- *
- * Instance
- *
- */
 
 instance_type(urgent_need?,exclusive_gateway)
 
@@ -28,12 +15,6 @@ has_variable_scope(urgent_need?,global)
 		 
 has_variable_type(urgent_need?,enumeration)
 		 
-/**
- *
- * Instance
- *
- */
-
 instance_type(consult_physician_directly_by_phone,task)
 
 has_priority(consult_physician_directly_by_phone,10)
@@ -54,12 +35,6 @@ has_max_start_period(consult_physician_directly_by_phone,00:001:00:00:00)
 		 
 has_start_quantity(consult_physician_directly_by_phone,1)
 		 
-/**
- *
- * Instance
- *
- */
-
 instance_type(consult_surgery,task)
 
 has_priority(consult_surgery,10)
@@ -80,12 +55,6 @@ has_max_start_period(consult_surgery,00:001:00:00:00)
 		 
 has_start_quantity(consult_surgery,1)
 		 
-/**
- *
- * Instance
- *
- */
-
 instance_type(physician_assesses_need,task)
 
 has_priority(physician_assesses_need,10)
@@ -106,24 +75,12 @@ has_max_start_period(physician_assesses_need,00:001:00:00:00)
 		 
 has_start_quantity(physician_assesses_need,1)
 		 
-/**
- *
- * Instance
- *
- */
-
 instance_type(immediate_medical_action_required?,exclusive_gateway)
 
 has_variable_scope(immediate_medical_action_required?,global)
 		 
 has_variable_type(immediate_medical_action_required?,enumeration)
 		 
-/**
- *
- * Instance
- *
- */
-
 instance_type(physician_checks_self-availability,task)
 
 has_priority(physician_checks_self-availability,10)
@@ -144,12 +101,6 @@ has_max_start_period(physician_checks_self-availability,00:001:00:00:00)
 		 
 has_start_quantity(physician_checks_self-availability,1)
 		 
-/**
- *
- * Instance
- *
- */
-
 instance_type(surgery_assistant_assigns_appointment,task)
 
 has_priority(surgery_assistant_assigns_appointment,10)
@@ -170,24 +121,12 @@ has_max_start_period(surgery_assistant_assigns_appointment,00:001:00:00:00)
 		 
 has_start_quantity(surgery_assistant_assigns_appointment,1)
 		 
-/**
- *
- * Instance
- *
- */
-
 instance_type(physician_is_available?,exclusive_gateway)
 
 has_variable_scope(physician_is_available?,global)
 		 
 has_variable_type(physician_is_available?,enumeration)
 		 
-/**
- *
- * Instance
- *
- */
-
 instance_type(physician_travels_to_patient,task)
 
 has_priority(physician_travels_to_patient,10)
@@ -208,12 +147,6 @@ has_max_start_period(physician_travels_to_patient,00:001:00:00:00)
 		 
 has_start_quantity(physician_travels_to_patient,1)
 		 
-/**
- *
- * Instance
- *
- */
-
 instance_type(patient_is_treated,task)
 
 has_priority(patient_is_treated,10)
@@ -234,12 +167,6 @@ has_max_start_period(patient_is_treated,00:001:00:00:00)
 		 
 has_start_quantity(patient_is_treated,1)
 		 
-/**
- *
- * Instance
- *
- */
-
 instance_type(physician_informs_ambulance,task)
 
 has_priority(physician_informs_ambulance,10)
@@ -260,12 +187,6 @@ has_max_start_period(physician_informs_ambulance,00:001:00:00:00)
 		 
 has_start_quantity(physician_informs_ambulance,1)
 		 
-/**
- *
- * Instance
- *
- */
-
 instance_type(ambulance_travels_to_patient,task)
 
 has_priority(ambulance_travels_to_patient,10)
@@ -286,12 +207,6 @@ has_max_start_period(ambulance_travels_to_patient,00:001:00:00:00)
 		 
 has_start_quantity(ambulance_travels_to_patient,1)
 		 
-/**
- *
- * Instance
- *
- */
-
 instance_type(patient_arrives_at_surgery_at_appointment,task)
 
 has_priority(patient_arrives_at_surgery_at_appointment,10)
@@ -312,12 +227,6 @@ has_max_start_period(patient_arrives_at_surgery_at_appointment,00:001:00:00:00)
 		 
 has_start_quantity(patient_arrives_at_surgery_at_appointment,1)
 		 
-/**
- *
- * Instance
- *
- */
-
 instance_type(end_event-30744,end_event)
 
 /**
