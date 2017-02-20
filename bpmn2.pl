@@ -9,10 +9,14 @@
  
 instance_type(consult_physician,start_event).
 
+has_type(consult_physician,top-level).
+		 
 has_order(consult_physician,0).
 		 
 instance_type(urgent_need,exclusive_gateway).
 
+has_type(urgent_need,data-based_(without_marker)).
+		 
 has_order(urgent_need,0).
 		 
 has_variable_scope(urgent_need,global).
@@ -21,6 +25,8 @@ has_variable_type(urgent_need,enumeration).
 		 
 instance_type(consult_physician_directly_by_phone,task).
 
+has_type(consult_physician_directly_by_phone,standard).
+		 
 has_priority(consult_physician_directly_by_phone,10).
 		 
 has_execution_time(consult_physician_directly_by_phone,00_000_00_00_00).
@@ -43,6 +49,8 @@ has_order(consult_physician_directly_by_phone,0).
 		 
 instance_type(consult_surgery,task).
 
+has_type(consult_surgery,standard).
+		 
 has_priority(consult_surgery,10).
 		 
 has_execution_time(consult_surgery,00_000_00_00_00).
@@ -65,6 +73,8 @@ has_order(consult_surgery,0).
 		 
 instance_type(physician_assesses_need,task).
 
+has_type(physician_assesses_need,standard).
+		 
 has_priority(physician_assesses_need,10).
 		 
 has_execution_time(physician_assesses_need,00_000_00_00_00).
@@ -87,6 +97,8 @@ has_order(physician_assesses_need,0).
 		 
 instance_type(immediate_medical_action_required,exclusive_gateway).
 
+has_type(immediate_medical_action_required,data-based_(without_marker)).
+		 
 has_order(immediate_medical_action_required,0).
 		 
 has_variable_scope(immediate_medical_action_required,global).
@@ -95,6 +107,8 @@ has_variable_type(immediate_medical_action_required,enumeration).
 		 
 instance_type(physician_checks_self-availability,task).
 
+has_type(physician_checks_self-availability,standard).
+		 
 has_priority(physician_checks_self-availability,10).
 		 
 has_execution_time(physician_checks_self-availability,00_000_00_00_00).
@@ -117,6 +131,8 @@ has_order(physician_checks_self-availability,0).
 		 
 instance_type(surgery_assistant_assigns_appointment,task).
 
+has_type(surgery_assistant_assigns_appointment,standard).
+		 
 has_priority(surgery_assistant_assigns_appointment,10).
 		 
 has_execution_time(surgery_assistant_assigns_appointment,00_000_00_00_00).
@@ -139,6 +155,8 @@ has_order(surgery_assistant_assigns_appointment,0).
 		 
 instance_type(physician_is_available,exclusive_gateway).
 
+has_type(physician_is_available,data-based_(without_marker)).
+		 
 has_order(physician_is_available,0).
 		 
 has_variable_scope(physician_is_available,global).
@@ -147,6 +165,8 @@ has_variable_type(physician_is_available,enumeration).
 		 
 instance_type(physician_travels_to_patient,task).
 
+has_type(physician_travels_to_patient,standard).
+		 
 has_priority(physician_travels_to_patient,10).
 		 
 has_execution_time(physician_travels_to_patient,00_000_00_00_00).
@@ -169,6 +189,8 @@ has_order(physician_travels_to_patient,0).
 		 
 instance_type(patient_is_treated,task).
 
+has_type(patient_is_treated,standard).
+		 
 has_priority(patient_is_treated,10).
 		 
 has_execution_time(patient_is_treated,00_000_00_00_00).
@@ -191,6 +213,8 @@ has_order(patient_is_treated,0).
 		 
 instance_type(physician_informs_ambulance,task).
 
+has_type(physician_informs_ambulance,standard).
+		 
 has_priority(physician_informs_ambulance,10).
 		 
 has_execution_time(physician_informs_ambulance,00_000_00_00_00).
@@ -213,6 +237,8 @@ has_order(physician_informs_ambulance,0).
 		 
 instance_type(ambulance_travels_to_patient,task).
 
+has_type(ambulance_travels_to_patient,standard).
+		 
 has_priority(ambulance_travels_to_patient,10).
 		 
 has_execution_time(ambulance_travels_to_patient,00_000_00_00_00).
@@ -235,6 +261,8 @@ has_order(ambulance_travels_to_patient,0).
 		 
 instance_type(patient_arrives_at_surgery_at_appointment,task).
 
+has_type(patient_arrives_at_surgery_at_appointment,standard).
+		 
 has_priority(patient_arrives_at_surgery_at_appointment,10).
 		 
 has_execution_time(patient_arrives_at_surgery_at_appointment,00_000_00_00_00).
@@ -257,6 +285,8 @@ has_order(patient_arrives_at_surgery_at_appointment,0).
 		 
 instance_type(end_event-30744,end_event).
 
+has_type(end_event-30744,local).
+		 
 has_order(end_event-30744,0).
 		 
 /**

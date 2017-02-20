@@ -25,6 +25,15 @@
 							      	translate(
 							      	@class, $uppercase, $smallcase),' ','_')"/>
 instance_type(<xsl:value-of select="$instance_name"/>,<xsl:value-of select="$class"/>).
+<xsl:variable name="attrib" select="translate(
+							      	translate(
+							      	ATTRIBUTE[@name='Type'], $uppercase, $smallcase),' ','_')"/>
+<xsl:choose>
+		 <xsl:when test="$attrib">
+has_type(<xsl:value-of select="concat($instance_name,',', $attrib)"/>).
+		 </xsl:when>
+		 <xsl:otherwise></xsl:otherwise>
+</xsl:choose>
 <xsl:variable name="attrib" select="ATTRIBUTE[@name='Priority']"/>
 <xsl:choose>
 		 <xsl:when test="$attrib">
@@ -155,7 +164,6 @@ show_time_atr(A):- instance_type(A,Class),
 										write('Waiting '), write(Waiting), nl,
 										write('Transport '), write(Transport), nl,
 										write('Max_start '), write(Max_start), nl,
-										write('Max_wait '), write(Max_wait), nl.
-
+										write('Max_wait '), write(Max_wait), nl.										
 </xsl:template>
 </xsl:stylesheet>

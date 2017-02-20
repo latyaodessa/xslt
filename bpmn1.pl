@@ -9,10 +9,14 @@
  
 instance_type(check-in_process_airport,start_event).
 
+has_type(check-in_process_airport,top-level).
+		 
 has_order(check-in_process_airport,0).
 		 
 instance_type(online_check-in_already_completed,exclusive_gateway).
 
+has_type(online_check-in_already_completed,data-based_(without_marker)).
+		 
 has_order(online_check-in_already_completed,0).
 		 
 has_variable_scope(online_check-in_already_completed,global).
@@ -21,6 +25,8 @@ has_variable_type(online_check-in_already_completed,enumeration).
 		 
 instance_type(conduct_check-in_at_check-in_machine,task).
 
+has_type(conduct_check-in_at_check-in_machine,standard).
+		 
 has_priority(conduct_check-in_at_check-in_machine,10).
 		 
 has_execution_time(conduct_check-in_at_check-in_machine,00_000_00_00_00).
@@ -43,6 +49,8 @@ has_order(conduct_check-in_at_check-in_machine,0).
 		 
 instance_type(extra_baggage_in_addition_to_hand_luggage,exclusive_gateway).
 
+has_type(extra_baggage_in_addition_to_hand_luggage,data-based_(without_marker)).
+		 
 has_order(extra_baggage_in_addition_to_hand_luggage,0).
 		 
 has_variable_scope(extra_baggage_in_addition_to_hand_luggage,global).
@@ -51,6 +59,8 @@ has_variable_type(extra_baggage_in_addition_to_hand_luggage,enumeration).
 		 
 instance_type(queue_in_for_baggage_drop-off,task).
 
+has_type(queue_in_for_baggage_drop-off,standard).
+		 
 has_priority(queue_in_for_baggage_drop-off,10).
 		 
 has_execution_time(queue_in_for_baggage_drop-off,00_000_00_00_00).
@@ -73,6 +83,8 @@ has_order(queue_in_for_baggage_drop-off,0).
 		 
 instance_type(baggage_included_in_ticket,exclusive_gateway).
 
+has_type(baggage_included_in_ticket,data-based_(without_marker)).
+		 
 has_order(baggage_included_in_ticket,0).
 		 
 has_variable_scope(baggage_included_in_ticket,global).
@@ -81,6 +93,8 @@ has_variable_type(baggage_included_in_ticket,enumeration).
 		 
 instance_type(agent_fixes_baggage_stickers,task).
 
+has_type(agent_fixes_baggage_stickers,standard).
+		 
 has_priority(agent_fixes_baggage_stickers,10).
 		 
 has_execution_time(agent_fixes_baggage_stickers,00_000_00_00_00).
@@ -103,6 +117,8 @@ has_order(agent_fixes_baggage_stickers,0).
 		 
 instance_type(agent_transfers_baggage_to_conveyor,task).
 
+has_type(agent_transfers_baggage_to_conveyor,standard).
+		 
 has_priority(agent_transfers_baggage_to_conveyor,10).
 		 
 has_execution_time(agent_transfers_baggage_to_conveyor,00_000_00_00_00).
@@ -125,6 +141,8 @@ has_order(agent_transfers_baggage_to_conveyor,0).
 		 
 instance_type(agent_calculates_extra_price,task).
 
+has_type(agent_calculates_extra_price,standard).
+		 
 has_priority(agent_calculates_extra_price,10).
 		 
 has_execution_time(agent_calculates_extra_price,00_000_00_00_00).
@@ -147,6 +165,8 @@ has_order(agent_calculates_extra_price,0).
 		 
 instance_type(purchase_of_baggage_possible,exclusive_gateway).
 
+has_type(purchase_of_baggage_possible,data-based_(without_marker)).
+		 
 has_order(purchase_of_baggage_possible,0).
 		 
 has_variable_scope(purchase_of_baggage_possible,global).
@@ -155,6 +175,8 @@ has_variable_type(purchase_of_baggage_possible,enumeration).
 		 
 instance_type(customer_wants_to_purchase_extra_bag,exclusive_gateway).
 
+has_type(customer_wants_to_purchase_extra_bag,data-based_(without_marker)).
+		 
 has_order(customer_wants_to_purchase_extra_bag,0).
 		 
 has_variable_scope(customer_wants_to_purchase_extra_bag,global).
@@ -163,6 +185,8 @@ has_variable_type(customer_wants_to_purchase_extra_bag,enumeration).
 		 
 instance_type(customer_conducts_payment,task).
 
+has_type(customer_conducts_payment,standard).
+		 
 has_priority(customer_conducts_payment,10).
 		 
 has_execution_time(customer_conducts_payment,00_000_00_00_00).
@@ -185,6 +209,8 @@ has_order(customer_conducts_payment,0).
 		 
 instance_type(agent_checks_boarding_pass__id,task).
 
+has_type(agent_checks_boarding_pass__id,standard).
+		 
 has_priority(agent_checks_boarding_pass__id,10).
 		 
 has_execution_time(agent_checks_boarding_pass__id,00_000_00_00_00).
@@ -207,18 +233,26 @@ has_order(agent_checks_boarding_pass__id,0).
 		 
 instance_type(check-in_with_baggage_successfully_completed,end_event).
 
+has_type(check-in_with_baggage_successfully_completed,local).
+		 
 has_order(check-in_with_baggage_successfully_completed,0).
 		 
 instance_type(check-in_completed_without_extra_baggage,end_event).
 
+has_type(check-in_completed_without_extra_baggage,local).
+		 
 has_order(check-in_completed_without_extra_baggage,0).
 		 
 instance_type(check-in_completed_without_extra_baggage,_customer_not_willing_to_pay,end_event).
 
+has_type(check-in_completed_without_extra_baggage,_customer_not_willing_to_pay,local).
+		 
 has_order(check-in_completed_without_extra_baggage,_customer_not_willing_to_pay,0).
 		 
 instance_type(check-in_completed,end_event).
 
+has_type(check-in_completed,local).
+		 
 has_order(check-in_completed,0).
 		 
 /**
