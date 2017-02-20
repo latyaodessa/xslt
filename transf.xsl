@@ -8,6 +8,24 @@
 
 /**
  *
+ * Model Attributes
+ *
+ */
+ 
+ <xsl:for-each select="ADOXML/MODELS/MODEL/MODELATTRIBUTES">
+ 
+ <xsl:variable name="attrib" select="ATTRIBUTE[@name='Number of objects and relations']"/>
+<xsl:choose>
+		 <xsl:when test="$attrib">
+has_total_count_objects(<xsl:value-of select="$attrib"/>).
+		 </xsl:when>
+		 <xsl:otherwise></xsl:otherwise>
+</xsl:choose>
+ 
+ </xsl:for-each>
+
+/**
+ *
  * Instance
  *
  */
@@ -177,6 +195,11 @@ show_path(A,B):- subsequent(A,B),
 show_path(A,B):- subsequent(A,Z), 
 										write('From '), write(A), nl,
 										write('To '), write(Z), nl,
-										show_path(Z,B).									
+										show_path(Z,B).			
+
+/* show_total_exec_time(A,B):- subsequent(A,B),
+										has_execution_time(A,Execution1),
+										has_execution_time(B,Execution2),
+										write('Total Execution '), write(Execution1 + Execution2), nl. */
 </xsl:template>
 </xsl:stylesheet>

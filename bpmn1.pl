@@ -2,6 +2,16 @@
 
 /**
  *
+ * Model Attributes
+ *
+ */
+ 
+ 
+has_total_count_objects(35).
+		 
+
+/**
+ *
  * Instance
  *
  */
@@ -448,4 +458,9 @@ show_path(A,B):- subsequent(A,B),
 show_path(A,B):- subsequent(A,Z), 
 										write('From '), write(A), nl,
 										write('To '), write(Z), nl,
-										show_path(Z,B).									
+										show_path(Z,B).			
+
+/* show_total_exec_time(A,B):- subsequent(A,B),
+										has_execution_time(A,Execution1),
+										has_execution_time(B,Execution2),
+										write('Total Execution '), write(Execution1 + Execution2), nl. */
