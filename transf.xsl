@@ -170,5 +170,13 @@ show_time_atr(A):- instance_type(A,Class),
 
 path_exist(A,B):- subsequent(A,B).										
 path_exist(A,B):- subsequent(A,Z), path_exist(Z,B).
+
+show_path(A,B):- subsequent(A,B),
+										write('From '), write(A), nl,
+										write('To '), write(B), nl.
+show_path(A,B):- subsequent(A,Z), 
+										write('From '), write(A), nl,
+										write('To '), write(Z), nl,
+										show_path(Z,B).									
 </xsl:template>
 </xsl:stylesheet>
