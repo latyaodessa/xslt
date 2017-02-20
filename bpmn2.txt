@@ -9,8 +9,12 @@
  
 instance_type(consult_physician,start_event)
 
+has_order(consult_physician,0)
+		 
 instance_type(urgent_need?,exclusive_gateway)
 
+has_order(urgent_need?,0)
+		 
 has_variable_scope(urgent_need?,global)
 		 
 has_variable_type(urgent_need?,enumeration)
@@ -35,6 +39,8 @@ has_max_start_period(consult_physician_directly_by_phone,00:001:00:00:00)
 		 
 has_start_quantity(consult_physician_directly_by_phone,1)
 		 
+has_order(consult_physician_directly_by_phone,0)
+		 
 instance_type(consult_surgery,task)
 
 has_priority(consult_surgery,10)
@@ -54,6 +60,8 @@ has_min_quota_of_presence(consult_surgery,100)
 has_max_start_period(consult_surgery,00:001:00:00:00)
 		 
 has_start_quantity(consult_surgery,1)
+		 
+has_order(consult_surgery,0)
 		 
 instance_type(physician_assesses_need,task)
 
@@ -75,8 +83,12 @@ has_max_start_period(physician_assesses_need,00:001:00:00:00)
 		 
 has_start_quantity(physician_assesses_need,1)
 		 
+has_order(physician_assesses_need,0)
+		 
 instance_type(immediate_medical_action_required?,exclusive_gateway)
 
+has_order(immediate_medical_action_required?,0)
+		 
 has_variable_scope(immediate_medical_action_required?,global)
 		 
 has_variable_type(immediate_medical_action_required?,enumeration)
@@ -101,6 +113,8 @@ has_max_start_period(physician_checks_self-availability,00:001:00:00:00)
 		 
 has_start_quantity(physician_checks_self-availability,1)
 		 
+has_order(physician_checks_self-availability,0)
+		 
 instance_type(surgery_assistant_assigns_appointment,task)
 
 has_priority(surgery_assistant_assigns_appointment,10)
@@ -121,8 +135,12 @@ has_max_start_period(surgery_assistant_assigns_appointment,00:001:00:00:00)
 		 
 has_start_quantity(surgery_assistant_assigns_appointment,1)
 		 
+has_order(surgery_assistant_assigns_appointment,0)
+		 
 instance_type(physician_is_available?,exclusive_gateway)
 
+has_order(physician_is_available?,0)
+		 
 has_variable_scope(physician_is_available?,global)
 		 
 has_variable_type(physician_is_available?,enumeration)
@@ -147,6 +165,8 @@ has_max_start_period(physician_travels_to_patient,00:001:00:00:00)
 		 
 has_start_quantity(physician_travels_to_patient,1)
 		 
+has_order(physician_travels_to_patient,0)
+		 
 instance_type(patient_is_treated,task)
 
 has_priority(patient_is_treated,10)
@@ -166,6 +186,8 @@ has_min_quota_of_presence(patient_is_treated,100)
 has_max_start_period(patient_is_treated,00:001:00:00:00)
 		 
 has_start_quantity(patient_is_treated,1)
+		 
+has_order(patient_is_treated,0)
 		 
 instance_type(physician_informs_ambulance,task)
 
@@ -187,6 +209,8 @@ has_max_start_period(physician_informs_ambulance,00:001:00:00:00)
 		 
 has_start_quantity(physician_informs_ambulance,1)
 		 
+has_order(physician_informs_ambulance,0)
+		 
 instance_type(ambulance_travels_to_patient,task)
 
 has_priority(ambulance_travels_to_patient,10)
@@ -206,6 +230,8 @@ has_min_quota_of_presence(ambulance_travels_to_patient,100)
 has_max_start_period(ambulance_travels_to_patient,00:001:00:00:00)
 		 
 has_start_quantity(ambulance_travels_to_patient,1)
+		 
+has_order(ambulance_travels_to_patient,0)
 		 
 instance_type(patient_arrives_at_surgery_at_appointment,task)
 
@@ -227,8 +253,12 @@ has_max_start_period(patient_arrives_at_surgery_at_appointment,00:001:00:00:00)
 		 
 has_start_quantity(patient_arrives_at_surgery_at_appointment,1)
 		 
+has_order(patient_arrives_at_surgery_at_appointment,0)
+		 
 instance_type(end_event-30744,end_event)
 
+has_order(end_event-30744,0)
+		 
 /**
  *
  * CONNECTOR

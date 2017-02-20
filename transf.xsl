@@ -85,6 +85,13 @@ has_start_quantity(<xsl:value-of select="concat($instance_name,',', $attrib)"/>)
 		 </xsl:when>
 		 <xsl:otherwise></xsl:otherwise>
 </xsl:choose>
+<xsl:variable name="attrib" select="ATTRIBUTE[@name='Order']"/>
+<xsl:choose>
+		 <xsl:when test="$attrib">
+has_order(<xsl:value-of select="concat($instance_name,',', $attrib)"/>)
+		 </xsl:when>
+		 <xsl:otherwise></xsl:otherwise>
+</xsl:choose>
 <xsl:variable name="attrib" select="ATTRIBUTE[@name='Variable scope']"/>
 <xsl:choose>
 		 <xsl:when test="$attrib">
