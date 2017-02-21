@@ -36,8 +36,9 @@ has_total_count_objects(<xsl:value-of select="$attrib"/>).
 									translate(
 									translate(
 									translate(
+									translate(
 							      	translate(
-							      	@name, $uppercase, $smallcase),'&amp;',''),'?',''),' ','_')"/>
+							      	@name, $uppercase, $smallcase),'&amp;',''),'?',''),' ','_'),',','_')"/>
 
 <xsl:variable name="class" select="translate(
 							      	translate(

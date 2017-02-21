@@ -253,11 +253,11 @@ has_type(check-in_completed_without_extra_baggage,local).
 		 
 has_order(check-in_completed_without_extra_baggage,0).
 		 
-instance_type(check-in_completed_without_extra_baggage,_customer_not_willing_to_pay,end_event).
+instance_type(check-in_completed_without_extra_baggage__customer_not_willing_to_pay,end_event).
 
-has_type(check-in_completed_without_extra_baggage,_customer_not_willing_to_pay,local).
+has_type(check-in_completed_without_extra_baggage__customer_not_willing_to_pay,local).
 		 
-has_order(check-in_completed_without_extra_baggage,_customer_not_willing_to_pay,0).
+has_order(check-in_completed_without_extra_baggage__customer_not_willing_to_pay,0).
 		 
 instance_type(check-in_completed,end_event).
 
