@@ -480,6 +480,11 @@ show_path(A,B):- subsequent(A,Z),
 										write('To '), write(Z), nl,
 										show_path(Z,B).			
 
+show_type(A):- 	instance_type(A,Class), 
+										has_type(A,Type),
+										write('Class '), write(Class), nl,
+										write('Type '), write(Type), nl.
+										
 /* show_total_exec_time(A,B):- subsequent(A,B),
 										has_execution_time(A,Execution1),
 										has_execution_time(B,Execution2),
