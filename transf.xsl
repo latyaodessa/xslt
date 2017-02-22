@@ -53,6 +53,17 @@ has_type(<xsl:value-of select="concat($instance_name,',', $attrib)"/>).
 		 </xsl:when>
 		 <xsl:otherwise></xsl:otherwise>
 </xsl:choose>
+<xsl:variable name="attrib" select="translate(
+							      	translate(
+									translate(
+									translate(
+							      	ATTRIBUTE[@name='Position'], $uppercase, $smallcase),' ','_'),':','_'),'.','_')"/>
+<xsl:choose>
+		 <xsl:when test="$attrib">
+has_position(<xsl:value-of select="concat($instance_name,',', $attrib)"/>).
+		 </xsl:when>
+		 <xsl:otherwise></xsl:otherwise>
+</xsl:choose>
 <xsl:variable name="attrib" select="ATTRIBUTE[@name='Priority']"/>
 <xsl:choose>
 		 <xsl:when test="$attrib">
@@ -172,7 +183,9 @@ denomination_from_to(<xsl:value-of select="concat($from,',', $to,',', $attrib)"/
  *
  */	
 
-show_time_atr(A):- instance_type(A,Class), 
+show_all_attr(A):- instance_type(A,Class), 
+										has_type(A,Type),
+										has_position(A,Position),
 										has_execution_time(A,Execution), 
 										has_waiting_time(A,Waiting), 
 										has_resting_time(A,Resting), 
@@ -181,6 +194,8 @@ show_time_atr(A):- instance_type(A,Class),
 										has_max_start_period(A,Max_start),
 										write('Instance '), write(A), nl,
 										write('Class '), write(Class), nl,
+										write('Type '), write(Type), nl,
+										write('Position '), write(Position), nl,
 										write('Execution '), write(Execution), nl,
 										write('Waiting '), write(Waiting), nl,
 										write('Transport '), write(Transport), nl,
@@ -197,15 +212,11 @@ show_path(A,B):- subsequent(A,Z),
 										write('From '), write(A), nl,
 										write('To '), write(Z), nl,
 										show_path(Z,B).			
-
-show_type(A):- 	instance_type(A,Class), 
-										has_type(A,Type),
-										write('Class '), write(Class), nl,
-										write('Type '), write(Type), nl.
 										
 /* show_total_exec_time(A,B):- subsequent(A,B),
 										has_execution_time(A,Execution1),
 										has_execution_time(B,Execution2),
-										write('Total Execution '), write(Execution1 + Execution2), nl. */
+										Execution = Execution1 + Execution2,
+										write('Total Execution '), write(Execution), nl. */
 </xsl:template>
 </xsl:stylesheet>

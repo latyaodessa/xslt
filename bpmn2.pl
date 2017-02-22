@@ -21,11 +21,15 @@ instance_type(consult_physician,start_event).
 
 has_type(consult_physician,top-level).
 		 
+has_position(consult_physician,node_x_4_5cm_y_8_5cm_index_1).
+		 
 has_order(consult_physician,0).
 		 
 instance_type(urgent_need,exclusive_gateway).
 
 has_type(urgent_need,data-based_(without_marker)).
+		 
+has_position(urgent_need,node_x_8cm_y_8_5cm_index_2).
 		 
 has_order(urgent_need,0).
 		 
@@ -36,6 +40,8 @@ has_variable_type(urgent_need,enumeration).
 instance_type(consult_physician_directly_by_phone,task).
 
 has_type(consult_physician_directly_by_phone,standard).
+		 
+has_position(consult_physician_directly_by_phone,node_x_12cm_y_8_5cm_w_3_36cm_h_1_8cm_index_3).
 		 
 has_priority(consult_physician_directly_by_phone,10).
 		 
@@ -61,6 +67,8 @@ instance_type(consult_surgery,task).
 
 has_type(consult_surgery,standard).
 		 
+has_position(consult_surgery,node_x_12cm_y_5_5cm_w_3_36cm_h_1_8cm_index_6).
+		 
 has_priority(consult_surgery,10).
 		 
 has_execution_time(consult_surgery,00_000_00_00_00).
@@ -84,6 +92,8 @@ has_order(consult_surgery,0).
 instance_type(physician_assesses_need,task).
 
 has_type(physician_assesses_need,standard).
+		 
+has_position(physician_assesses_need,node_x_17_5cm_y_8_5cm_w_3_36cm_h_1_8cm_index_8).
 		 
 has_priority(physician_assesses_need,10).
 		 
@@ -109,6 +119,8 @@ instance_type(immediate_medical_action_required,exclusive_gateway).
 
 has_type(immediate_medical_action_required,data-based_(without_marker)).
 		 
+has_position(immediate_medical_action_required,node_x_21_5cm_y_8_5cm_index_10).
+		 
 has_order(immediate_medical_action_required,0).
 		 
 has_variable_scope(immediate_medical_action_required,global).
@@ -118,6 +130,8 @@ has_variable_type(immediate_medical_action_required,enumeration).
 instance_type(physician_checks_self-availability,task).
 
 has_type(physician_checks_self-availability,standard).
+		 
+has_position(physician_checks_self-availability,node_x_26cm_y_8_5cm_w_3_36cm_h_1_8cm_index_12).
 		 
 has_priority(physician_checks_self-availability,10).
 		 
@@ -143,6 +157,8 @@ instance_type(surgery_assistant_assigns_appointment,task).
 
 has_type(surgery_assistant_assigns_appointment,standard).
 		 
+has_position(surgery_assistant_assigns_appointment,node_x_26cm_y_5_5cm_w_3_36cm_h_1_8cm_index_14).
+		 
 has_priority(surgery_assistant_assigns_appointment,10).
 		 
 has_execution_time(surgery_assistant_assigns_appointment,00_000_00_00_00).
@@ -167,6 +183,8 @@ instance_type(physician_is_available,exclusive_gateway).
 
 has_type(physician_is_available,data-based_(without_marker)).
 		 
+has_position(physician_is_available,node_x_30_5cm_y_8_5cm_index_17).
+		 
 has_order(physician_is_available,0).
 		 
 has_variable_scope(physician_is_available,global).
@@ -176,6 +194,8 @@ has_variable_type(physician_is_available,enumeration).
 instance_type(physician_travels_to_patient,task).
 
 has_type(physician_travels_to_patient,standard).
+		 
+has_position(physician_travels_to_patient,node_x_35_5cm_y_8_5cm_w_3_36cm_h_1_8cm_index_19).
 		 
 has_priority(physician_travels_to_patient,10).
 		 
@@ -201,6 +221,8 @@ instance_type(patient_is_treated,task).
 
 has_type(patient_is_treated,standard).
 		 
+has_position(patient_is_treated,node_x_44cm_y_8_5cm_w_3_36cm_h_1_8cm_index_21).
+		 
 has_priority(patient_is_treated,10).
 		 
 has_execution_time(patient_is_treated,00_000_00_00_00).
@@ -224,6 +246,8 @@ has_order(patient_is_treated,0).
 instance_type(physician_informs_ambulance,task).
 
 has_type(physician_informs_ambulance,standard).
+		 
+has_position(physician_informs_ambulance,node_x_35_5cm_y_11_5cm_w_3_36cm_h_1_8cm_index_23).
 		 
 has_priority(physician_informs_ambulance,10).
 		 
@@ -249,6 +273,8 @@ instance_type(ambulance_travels_to_patient,task).
 
 has_type(ambulance_travels_to_patient,standard).
 		 
+has_position(ambulance_travels_to_patient,node_x_40cm_y_11_5cm_w_3_36cm_h_1_8cm_index_25).
+		 
 has_priority(ambulance_travels_to_patient,10).
 		 
 has_execution_time(ambulance_travels_to_patient,00_000_00_00_00).
@@ -273,6 +299,8 @@ instance_type(patient_arrives_at_surgery_at_appointment,task).
 
 has_type(patient_arrives_at_surgery_at_appointment,standard).
 		 
+has_position(patient_arrives_at_surgery_at_appointment,node_x_35_5cm_y_5_5cm_w_3_36cm_h_1_8cm_index_28).
+		 
 has_priority(patient_arrives_at_surgery_at_appointment,10).
 		 
 has_execution_time(patient_arrives_at_surgery_at_appointment,00_000_00_00_00).
@@ -296,6 +324,8 @@ has_order(patient_arrives_at_surgery_at_appointment,0).
 instance_type(end_event-30744,end_event).
 
 has_type(end_event-30744,local).
+		 
+has_position(end_event-30744,node_x_49cm_y_8_5cm_index_31).
 		 
 has_order(end_event-30744,0).
 		 
@@ -454,7 +484,9 @@ subsequent(patient_is_treated,end_event-30744).
  *
  */	
 
-show_time_atr(A):- instance_type(A,Class), 
+show_all_attr(A):- instance_type(A,Class), 
+										has_type(A,Type),
+										has_position(A,Position),
 										has_execution_time(A,Execution), 
 										has_waiting_time(A,Waiting), 
 										has_resting_time(A,Resting), 
@@ -463,6 +495,8 @@ show_time_atr(A):- instance_type(A,Class),
 										has_max_start_period(A,Max_start),
 										write('Instance '), write(A), nl,
 										write('Class '), write(Class), nl,
+										write('Type '), write(Type), nl,
+										write('Position '), write(Position), nl,
 										write('Execution '), write(Execution), nl,
 										write('Waiting '), write(Waiting), nl,
 										write('Transport '), write(Transport), nl,
@@ -479,13 +513,9 @@ show_path(A,B):- subsequent(A,Z),
 										write('From '), write(A), nl,
 										write('To '), write(Z), nl,
 										show_path(Z,B).			
-
-show_type(A):- 	instance_type(A,Class), 
-										has_type(A,Type),
-										write('Class '), write(Class), nl,
-										write('Type '), write(Type), nl.
 										
 /* show_total_exec_time(A,B):- subsequent(A,B),
 										has_execution_time(A,Execution1),
 										has_execution_time(B,Execution2),
-										write('Total Execution '), write(Execution1 + Execution2), nl. */
+										Execution = Execution1 + Execution2,
+										write('Total Execution '), write(Execution), nl. */
