@@ -631,6 +631,7 @@ representation_from_to(online_check-in_already_completed,extra_baggage_in_additi
  * RULES
  *
  */	
+ 
 show_obj_attr(A):- instance_type(A,Class), 
 										has_type(A,Type),
 										has_position(A,Position),

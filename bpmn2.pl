@@ -629,6 +629,7 @@ representation_from_to(patient_is_treated,end_event-30744,above_below).
  * RULES
  *
  */	
+ 
 show_obj_attr(A):- instance_type(A,Class), 
 										has_type(A,Type),
 										has_position(A,Position),
