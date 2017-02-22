@@ -337,6 +337,8 @@ has_order(end_event-30744,0).
 
 subsequent(consult_physician,urgent_need).
 
+representation_from_to(consult_physician,urgent_need,above_below).
+		 
 /**
  *
  * CONNECTOR
@@ -345,7 +347,9 @@ subsequent(consult_physician,urgent_need).
 
 subsequent(urgent_need,consult_physician_directly_by_phone).
 
-denomination_from_to(urgent_need,consult_physician_directly_by_phone,Yes).
+denomination_from_to(urgent_need,consult_physician_directly_by_phone,yes).
+		 
+representation_from_to(urgent_need,consult_physician_directly_by_phone,above_below).
 		 
 /**
  *
@@ -355,7 +359,9 @@ denomination_from_to(urgent_need,consult_physician_directly_by_phone,Yes).
 
 subsequent(urgent_need,consult_surgery).
 
-denomination_from_to(urgent_need,consult_surgery,No).
+denomination_from_to(urgent_need,consult_surgery,no).
+		 
+representation_from_to(urgent_need,consult_surgery,left_right).
 		 
 /**
  *
@@ -365,6 +371,8 @@ denomination_from_to(urgent_need,consult_surgery,No).
 
 subsequent(consult_physician_directly_by_phone,physician_assesses_need).
 
+representation_from_to(consult_physician_directly_by_phone,physician_assesses_need,above_below).
+		 
 /**
  *
  * CONNECTOR
@@ -373,6 +381,8 @@ subsequent(consult_physician_directly_by_phone,physician_assesses_need).
 
 subsequent(physician_assesses_need,immediate_medical_action_required).
 
+representation_from_to(physician_assesses_need,immediate_medical_action_required,above_below).
+		 
 /**
  *
  * CONNECTOR
@@ -381,7 +391,9 @@ subsequent(physician_assesses_need,immediate_medical_action_required).
 
 subsequent(immediate_medical_action_required,physician_checks_self-availability).
 
-denomination_from_to(immediate_medical_action_required,physician_checks_self-availability,Yes).
+denomination_from_to(immediate_medical_action_required,physician_checks_self-availability,yes).
+		 
+representation_from_to(immediate_medical_action_required,physician_checks_self-availability,above_below).
 		 
 /**
  *
@@ -391,6 +403,8 @@ denomination_from_to(immediate_medical_action_required,physician_checks_self-ava
 
 subsequent(consult_surgery,surgery_assistant_assigns_appointment).
 
+representation_from_to(consult_surgery,surgery_assistant_assigns_appointment,above_below).
+		 
 /**
  *
  * CONNECTOR
@@ -399,7 +413,9 @@ subsequent(consult_surgery,surgery_assistant_assigns_appointment).
 
 subsequent(immediate_medical_action_required,surgery_assistant_assigns_appointment).
 
-denomination_from_to(immediate_medical_action_required,surgery_assistant_assigns_appointment,No).
+denomination_from_to(immediate_medical_action_required,surgery_assistant_assigns_appointment,no).
+		 
+representation_from_to(immediate_medical_action_required,surgery_assistant_assigns_appointment,left_right).
 		 
 /**
  *
@@ -409,6 +425,8 @@ denomination_from_to(immediate_medical_action_required,surgery_assistant_assigns
 
 subsequent(physician_checks_self-availability,physician_is_available).
 
+representation_from_to(physician_checks_self-availability,physician_is_available,above_below).
+		 
 /**
  *
  * CONNECTOR
@@ -417,7 +435,9 @@ subsequent(physician_checks_self-availability,physician_is_available).
 
 subsequent(physician_is_available,physician_travels_to_patient).
 
-denomination_from_to(physician_is_available,physician_travels_to_patient,Yes).
+denomination_from_to(physician_is_available,physician_travels_to_patient,yes).
+		 
+representation_from_to(physician_is_available,physician_travels_to_patient,above_below).
 		 
 /**
  *
@@ -427,6 +447,8 @@ denomination_from_to(physician_is_available,physician_travels_to_patient,Yes).
 
 subsequent(physician_travels_to_patient,patient_is_treated).
 
+representation_from_to(physician_travels_to_patient,patient_is_treated,above_below).
+		 
 /**
  *
  * CONNECTOR
@@ -435,7 +457,9 @@ subsequent(physician_travels_to_patient,patient_is_treated).
 
 subsequent(physician_is_available,physician_informs_ambulance).
 
-denomination_from_to(physician_is_available,physician_informs_ambulance,No).
+denomination_from_to(physician_is_available,physician_informs_ambulance,no).
+		 
+representation_from_to(physician_is_available,physician_informs_ambulance,above_below).
 		 
 /**
  *
@@ -445,6 +469,8 @@ denomination_from_to(physician_is_available,physician_informs_ambulance,No).
 
 subsequent(physician_informs_ambulance,ambulance_travels_to_patient).
 
+representation_from_to(physician_informs_ambulance,ambulance_travels_to_patient,above_below).
+		 
 /**
  *
  * CONNECTOR
@@ -453,6 +479,8 @@ subsequent(physician_informs_ambulance,ambulance_travels_to_patient).
 
 subsequent(ambulance_travels_to_patient,patient_is_treated).
 
+representation_from_to(ambulance_travels_to_patient,patient_is_treated,above_below).
+		 
 /**
  *
  * CONNECTOR
@@ -461,6 +489,8 @@ subsequent(ambulance_travels_to_patient,patient_is_treated).
 
 subsequent(surgery_assistant_assigns_appointment,patient_arrives_at_surgery_at_appointment).
 
+representation_from_to(surgery_assistant_assigns_appointment,patient_arrives_at_surgery_at_appointment,above_below).
+		 
 /**
  *
  * CONNECTOR
@@ -469,6 +499,8 @@ subsequent(surgery_assistant_assigns_appointment,patient_arrives_at_surgery_at_a
 
 subsequent(patient_arrives_at_surgery_at_appointment,patient_is_treated).
 
+representation_from_to(patient_arrives_at_surgery_at_appointment,patient_is_treated,above_below).
+		 
 /**
  *
  * CONNECTOR
@@ -477,6 +509,8 @@ subsequent(patient_arrives_at_surgery_at_appointment,patient_is_treated).
 
 subsequent(patient_is_treated,end_event-30744).
 
+representation_from_to(patient_is_treated,end_event-30744,above_below).
+		 
 
 /**
  *

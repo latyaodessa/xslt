@@ -307,6 +307,8 @@ has_order(check-in_completed,0).
 
 subsequent(check-in_process_airport,online_check-in_already_completed).
 
+representation_from_to(check-in_process_airport,online_check-in_already_completed,above_below).
+		 
 /**
  *
  * CONNECTOR
@@ -315,7 +317,9 @@ subsequent(check-in_process_airport,online_check-in_already_completed).
 
 subsequent(online_check-in_already_completed,conduct_check-in_at_check-in_machine).
 
-denomination_from_to(online_check-in_already_completed,conduct_check-in_at_check-in_machine,No).
+denomination_from_to(online_check-in_already_completed,conduct_check-in_at_check-in_machine,no).
+		 
+representation_from_to(online_check-in_already_completed,conduct_check-in_at_check-in_machine,above_below).
 		 
 /**
  *
@@ -325,6 +329,8 @@ denomination_from_to(online_check-in_already_completed,conduct_check-in_at_check
 
 subsequent(conduct_check-in_at_check-in_machine,extra_baggage_in_addition_to_hand_luggage).
 
+representation_from_to(conduct_check-in_at_check-in_machine,extra_baggage_in_addition_to_hand_luggage,above_below).
+		 
 /**
  *
  * CONNECTOR
@@ -333,7 +339,9 @@ subsequent(conduct_check-in_at_check-in_machine,extra_baggage_in_addition_to_han
 
 subsequent(extra_baggage_in_addition_to_hand_luggage,queue_in_for_baggage_drop-off).
 
-denomination_from_to(extra_baggage_in_addition_to_hand_luggage,queue_in_for_baggage_drop-off,Yes).
+denomination_from_to(extra_baggage_in_addition_to_hand_luggage,queue_in_for_baggage_drop-off,yes).
+		 
+representation_from_to(extra_baggage_in_addition_to_hand_luggage,queue_in_for_baggage_drop-off,above_below).
 		 
 /**
  *
@@ -343,6 +351,8 @@ denomination_from_to(extra_baggage_in_addition_to_hand_luggage,queue_in_for_bagg
 
 subsequent(queue_in_for_baggage_drop-off,agent_checks_boarding_pass__id).
 
+representation_from_to(queue_in_for_baggage_drop-off,agent_checks_boarding_pass__id,above_below).
+		 
 /**
  *
  * CONNECTOR
@@ -351,7 +361,9 @@ subsequent(queue_in_for_baggage_drop-off,agent_checks_boarding_pass__id).
 
 subsequent(baggage_included_in_ticket,agent_fixes_baggage_stickers).
 
-denomination_from_to(baggage_included_in_ticket,agent_fixes_baggage_stickers,Yes).
+denomination_from_to(baggage_included_in_ticket,agent_fixes_baggage_stickers,yes).
+		 
+representation_from_to(baggage_included_in_ticket,agent_fixes_baggage_stickers,above_below).
 		 
 /**
  *
@@ -361,6 +373,8 @@ denomination_from_to(baggage_included_in_ticket,agent_fixes_baggage_stickers,Yes
 
 subsequent(agent_fixes_baggage_stickers,agent_transfers_baggage_to_conveyor).
 
+representation_from_to(agent_fixes_baggage_stickers,agent_transfers_baggage_to_conveyor,above_below).
+		 
 /**
  *
  * CONNECTOR
@@ -369,7 +383,9 @@ subsequent(agent_fixes_baggage_stickers,agent_transfers_baggage_to_conveyor).
 
 subsequent(baggage_included_in_ticket,agent_calculates_extra_price).
 
-denomination_from_to(baggage_included_in_ticket,agent_calculates_extra_price,No).
+denomination_from_to(baggage_included_in_ticket,agent_calculates_extra_price,no).
+		 
+representation_from_to(baggage_included_in_ticket,agent_calculates_extra_price,above_below).
 		 
 /**
  *
@@ -379,6 +395,8 @@ denomination_from_to(baggage_included_in_ticket,agent_calculates_extra_price,No)
 
 subsequent(agent_calculates_extra_price,purchase_of_baggage_possible).
 
+representation_from_to(agent_calculates_extra_price,purchase_of_baggage_possible,above_below).
+		 
 /**
  *
  * CONNECTOR
@@ -387,7 +405,9 @@ subsequent(agent_calculates_extra_price,purchase_of_baggage_possible).
 
 subsequent(purchase_of_baggage_possible,customer_wants_to_purchase_extra_bag).
 
-denomination_from_to(purchase_of_baggage_possible,customer_wants_to_purchase_extra_bag,Yes).
+denomination_from_to(purchase_of_baggage_possible,customer_wants_to_purchase_extra_bag,yes).
+		 
+representation_from_to(purchase_of_baggage_possible,customer_wants_to_purchase_extra_bag,above_below).
 		 
 /**
  *
@@ -397,6 +417,8 @@ denomination_from_to(purchase_of_baggage_possible,customer_wants_to_purchase_ext
 
 subsequent(agent_checks_boarding_pass__id,baggage_included_in_ticket).
 
+representation_from_to(agent_checks_boarding_pass__id,baggage_included_in_ticket,above_below).
+		 
 /**
  *
  * CONNECTOR
@@ -405,7 +427,9 @@ subsequent(agent_checks_boarding_pass__id,baggage_included_in_ticket).
 
 subsequent(customer_wants_to_purchase_extra_bag,customer_conducts_payment).
 
-denomination_from_to(customer_wants_to_purchase_extra_bag,customer_conducts_payment,Yes).
+denomination_from_to(customer_wants_to_purchase_extra_bag,customer_conducts_payment,yes).
+		 
+representation_from_to(customer_wants_to_purchase_extra_bag,customer_conducts_payment,above_below).
 		 
 /**
  *
@@ -415,6 +439,8 @@ denomination_from_to(customer_wants_to_purchase_extra_bag,customer_conducts_paym
 
 subsequent(customer_conducts_payment,agent_fixes_baggage_stickers).
 
+representation_from_to(customer_conducts_payment,agent_fixes_baggage_stickers,above_below).
+		 
 /**
  *
  * CONNECTOR
@@ -423,6 +449,8 @@ subsequent(customer_conducts_payment,agent_fixes_baggage_stickers).
 
 subsequent(agent_transfers_baggage_to_conveyor,check-in_with_baggage_successfully_completed).
 
+representation_from_to(agent_transfers_baggage_to_conveyor,check-in_with_baggage_successfully_completed,above_below).
+		 
 /**
  *
  * CONNECTOR
@@ -431,7 +459,9 @@ subsequent(agent_transfers_baggage_to_conveyor,check-in_with_baggage_successfull
 
 subsequent(purchase_of_baggage_possible,check-in_completed_without_extra_baggage).
 
-denomination_from_to(purchase_of_baggage_possible,check-in_completed_without_extra_baggage,No).
+denomination_from_to(purchase_of_baggage_possible,check-in_completed_without_extra_baggage,no).
+		 
+representation_from_to(purchase_of_baggage_possible,check-in_completed_without_extra_baggage,left_right).
 		 
 /**
  *
@@ -441,7 +471,9 @@ denomination_from_to(purchase_of_baggage_possible,check-in_completed_without_ext
 
 subsequent(customer_wants_to_purchase_extra_bag,check-in_completed_without_extra_baggage,_customer_not_willing_to_pay).
 
-denomination_from_to(customer_wants_to_purchase_extra_bag,check-in_completed_without_extra_baggage,_customer_not_willing_to_pay,No).
+denomination_from_to(customer_wants_to_purchase_extra_bag,check-in_completed_without_extra_baggage,_customer_not_willing_to_pay,no).
+		 
+representation_from_to(customer_wants_to_purchase_extra_bag,check-in_completed_without_extra_baggage,_customer_not_willing_to_pay,left_right).
 		 
 /**
  *
@@ -451,6 +483,8 @@ denomination_from_to(customer_wants_to_purchase_extra_bag,check-in_completed_wit
 
 subsequent(extra_baggage_in_addition_to_hand_luggage,check-in_completed).
 
+representation_from_to(extra_baggage_in_addition_to_hand_luggage,check-in_completed,above_below).
+		 
 /**
  *
  * CONNECTOR
@@ -459,7 +493,9 @@ subsequent(extra_baggage_in_addition_to_hand_luggage,check-in_completed).
 
 subsequent(online_check-in_already_completed,extra_baggage_in_addition_to_hand_luggage).
 
-denomination_from_to(online_check-in_already_completed,extra_baggage_in_addition_to_hand_luggage,Yes).
+denomination_from_to(online_check-in_already_completed,extra_baggage_in_addition_to_hand_luggage,yes).
+		 
+representation_from_to(online_check-in_already_completed,extra_baggage_in_addition_to_hand_luggage,above_below).
 		 
 
 /**

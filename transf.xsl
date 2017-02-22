@@ -166,7 +166,8 @@ has_variable_type(<xsl:value-of select="concat($instance_name,',', $attrib)"/>).
 							      	translate(
 							      	TO/@instance, $uppercase, $smallcase),'&amp;',''),' ','_'),'?','')"/>
 subsequent(<xsl:value-of select="concat($from,',', $to)"/>).
-<xsl:variable name="attrib" select="ATTRIBUTE[@name='Denomination']"/>
+<xsl:variable name="attrib" select="translate(
+							      	ATTRIBUTE[@name='Denomination'], $uppercase, $smallcase)"/>
 <xsl:if test="$attrib != ''">
 <xsl:choose>
 		 <xsl:when test="$attrib">
@@ -175,6 +176,15 @@ denomination_from_to(<xsl:value-of select="concat($from,',', $to,',', $attrib)"/
 		 <xsl:otherwise></xsl:otherwise>
 </xsl:choose>
 </xsl:if>
+<xsl:variable name="attrib" select="translate(
+							      	translate(
+							      	ATTRIBUTE[@name='Representation'], $uppercase, $smallcase),'/','_')"/>
+<xsl:choose>
+		 <xsl:when test="$attrib">
+representation_from_to(<xsl:value-of select="concat($from,',', $to,',', $attrib)"/>).
+		 </xsl:when>
+		 <xsl:otherwise></xsl:otherwise>
+</xsl:choose>
 </xsl:for-each>
 
 /**
