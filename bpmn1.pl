@@ -1,6 +1,6 @@
 
-
-/**
+ 
+ /**
  *
  * Model Attributes
  *
@@ -9,14 +9,14 @@
  
 has_total_count_objects(35).
 		 
-
-/**
+ 
+ /**
  *
  * Instance
  *
  */
 
- 
+
 instance_type(check-in_process_airport,start_event).
 
 has_type(check-in_process_airport,top-level).
@@ -25,6 +25,14 @@ has_position(check-in_process_airport,node_x_3_5cm_y_9_5cm_index_1).
 		 
 has_order(check-in_process_airport,0).
 		 
+ 
+ /**
+ *
+ * Instance
+ *
+ */
+
+
 instance_type(online_check-in_already_completed,exclusive_gateway).
 
 has_type(online_check-in_already_completed,data-based_(without_marker)).
@@ -37,6 +45,14 @@ has_variable_scope(online_check-in_already_completed,global).
 		 
 has_variable_type(online_check-in_already_completed,enumeration).
 		 
+ 
+ /**
+ *
+ * Instance
+ *
+ */
+
+
 instance_type(conduct_check-in_at_check-in_machine,task).
 
 has_type(conduct_check-in_at_check-in_machine,standard).
@@ -63,6 +79,14 @@ has_start_quantity(conduct_check-in_at_check-in_machine,1).
 		 
 has_order(conduct_check-in_at_check-in_machine,0).
 		 
+ 
+ /**
+ *
+ * Instance
+ *
+ */
+
+
 instance_type(extra_baggage_in_addition_to_hand_luggage,exclusive_gateway).
 
 has_type(extra_baggage_in_addition_to_hand_luggage,data-based_(without_marker)).
@@ -75,6 +99,14 @@ has_variable_scope(extra_baggage_in_addition_to_hand_luggage,global).
 		 
 has_variable_type(extra_baggage_in_addition_to_hand_luggage,enumeration).
 		 
+ 
+ /**
+ *
+ * Instance
+ *
+ */
+
+
 instance_type(queue_in_for_baggage_drop-off,task).
 
 has_type(queue_in_for_baggage_drop-off,standard).
@@ -101,6 +133,14 @@ has_start_quantity(queue_in_for_baggage_drop-off,1).
 		 
 has_order(queue_in_for_baggage_drop-off,0).
 		 
+ 
+ /**
+ *
+ * Instance
+ *
+ */
+
+
 instance_type(baggage_included_in_ticket,exclusive_gateway).
 
 has_type(baggage_included_in_ticket,data-based_(without_marker)).
@@ -113,6 +153,14 @@ has_variable_scope(baggage_included_in_ticket,global).
 		 
 has_variable_type(baggage_included_in_ticket,enumeration).
 		 
+ 
+ /**
+ *
+ * Instance
+ *
+ */
+
+
 instance_type(agent_fixes_baggage_stickers,task).
 
 has_type(agent_fixes_baggage_stickers,standard).
@@ -139,6 +187,14 @@ has_start_quantity(agent_fixes_baggage_stickers,1).
 		 
 has_order(agent_fixes_baggage_stickers,0).
 		 
+ 
+ /**
+ *
+ * Instance
+ *
+ */
+
+
 instance_type(agent_transfers_baggage_to_conveyor,task).
 
 has_type(agent_transfers_baggage_to_conveyor,standard).
@@ -165,6 +221,14 @@ has_start_quantity(agent_transfers_baggage_to_conveyor,1).
 		 
 has_order(agent_transfers_baggage_to_conveyor,0).
 		 
+ 
+ /**
+ *
+ * Instance
+ *
+ */
+
+
 instance_type(agent_calculates_extra_price,task).
 
 has_type(agent_calculates_extra_price,standard).
@@ -191,6 +255,14 @@ has_start_quantity(agent_calculates_extra_price,1).
 		 
 has_order(agent_calculates_extra_price,0).
 		 
+ 
+ /**
+ *
+ * Instance
+ *
+ */
+
+
 instance_type(purchase_of_baggage_possible,exclusive_gateway).
 
 has_type(purchase_of_baggage_possible,data-based_(without_marker)).
@@ -203,6 +275,14 @@ has_variable_scope(purchase_of_baggage_possible,global).
 		 
 has_variable_type(purchase_of_baggage_possible,enumeration).
 		 
+ 
+ /**
+ *
+ * Instance
+ *
+ */
+
+
 instance_type(customer_wants_to_purchase_extra_bag,exclusive_gateway).
 
 has_type(customer_wants_to_purchase_extra_bag,data-based_(without_marker)).
@@ -215,6 +295,14 @@ has_variable_scope(customer_wants_to_purchase_extra_bag,global).
 		 
 has_variable_type(customer_wants_to_purchase_extra_bag,enumeration).
 		 
+ 
+ /**
+ *
+ * Instance
+ *
+ */
+
+
 instance_type(customer_conducts_payment,task).
 
 has_type(customer_conducts_payment,standard).
@@ -241,6 +329,14 @@ has_start_quantity(customer_conducts_payment,1).
 		 
 has_order(customer_conducts_payment,0).
 		 
+ 
+ /**
+ *
+ * Instance
+ *
+ */
+
+
 instance_type(agent_checks_boarding_pass__id,task).
 
 has_type(agent_checks_boarding_pass__id,standard).
@@ -267,6 +363,14 @@ has_start_quantity(agent_checks_boarding_pass__id,1).
 		 
 has_order(agent_checks_boarding_pass__id,0).
 		 
+ 
+ /**
+ *
+ * Instance
+ *
+ */
+
+
 instance_type(check-in_with_baggage_successfully_completed,end_event).
 
 has_type(check-in_with_baggage_successfully_completed,local).
@@ -275,6 +379,14 @@ has_position(check-in_with_baggage_successfully_completed,node_x_45_5cm_y_13_5cm
 		 
 has_order(check-in_with_baggage_successfully_completed,0).
 		 
+ 
+ /**
+ *
+ * Instance
+ *
+ */
+
+
 instance_type(check-in_completed_without_extra_baggage,end_event).
 
 has_type(check-in_completed_without_extra_baggage,local).
@@ -283,6 +395,14 @@ has_position(check-in_completed_without_extra_baggage,node_x_40_5cm_y_2cm_index_
 		 
 has_order(check-in_completed_without_extra_baggage,0).
 		 
+ 
+ /**
+ *
+ * Instance
+ *
+ */
+
+
 instance_type(check-in_completed_without_extra_baggage__customer_not_willing_to_pay,end_event).
 
 has_type(check-in_completed_without_extra_baggage__customer_not_willing_to_pay,local).
@@ -291,6 +411,14 @@ has_position(check-in_completed_without_extra_baggage__customer_not_willing_to_p
 		 
 has_order(check-in_completed_without_extra_baggage__customer_not_willing_to_pay,0).
 		 
+ 
+ /**
+ *
+ * Instance
+ *
+ */
+
+
 instance_type(check-in_completed,end_event).
 
 has_type(check-in_completed,local).
@@ -301,7 +429,7 @@ has_order(check-in_completed,0).
 		 
 /**
  *
- * CONNECTOR
+ * Connector
  *
  */	
 
@@ -311,7 +439,7 @@ representation_from_to(check-in_process_airport,online_check-in_already_complete
 		 
 /**
  *
- * CONNECTOR
+ * Connector
  *
  */	
 
@@ -323,7 +451,7 @@ representation_from_to(online_check-in_already_completed,conduct_check-in_at_che
 		 
 /**
  *
- * CONNECTOR
+ * Connector
  *
  */	
 
@@ -333,7 +461,7 @@ representation_from_to(conduct_check-in_at_check-in_machine,extra_baggage_in_add
 		 
 /**
  *
- * CONNECTOR
+ * Connector
  *
  */	
 
@@ -345,7 +473,7 @@ representation_from_to(extra_baggage_in_addition_to_hand_luggage,queue_in_for_ba
 		 
 /**
  *
- * CONNECTOR
+ * Connector
  *
  */	
 
@@ -355,7 +483,7 @@ representation_from_to(queue_in_for_baggage_drop-off,agent_checks_boarding_pass_
 		 
 /**
  *
- * CONNECTOR
+ * Connector
  *
  */	
 
@@ -367,7 +495,7 @@ representation_from_to(baggage_included_in_ticket,agent_fixes_baggage_stickers,a
 		 
 /**
  *
- * CONNECTOR
+ * Connector
  *
  */	
 
@@ -377,7 +505,7 @@ representation_from_to(agent_fixes_baggage_stickers,agent_transfers_baggage_to_c
 		 
 /**
  *
- * CONNECTOR
+ * Connector
  *
  */	
 
@@ -389,7 +517,7 @@ representation_from_to(baggage_included_in_ticket,agent_calculates_extra_price,a
 		 
 /**
  *
- * CONNECTOR
+ * Connector
  *
  */	
 
@@ -399,7 +527,7 @@ representation_from_to(agent_calculates_extra_price,purchase_of_baggage_possible
 		 
 /**
  *
- * CONNECTOR
+ * Connector
  *
  */	
 
@@ -411,7 +539,7 @@ representation_from_to(purchase_of_baggage_possible,customer_wants_to_purchase_e
 		 
 /**
  *
- * CONNECTOR
+ * Connector
  *
  */	
 
@@ -421,7 +549,7 @@ representation_from_to(agent_checks_boarding_pass__id,baggage_included_in_ticket
 		 
 /**
  *
- * CONNECTOR
+ * Connector
  *
  */	
 
@@ -433,7 +561,7 @@ representation_from_to(customer_wants_to_purchase_extra_bag,customer_conducts_pa
 		 
 /**
  *
- * CONNECTOR
+ * Connector
  *
  */	
 
@@ -443,7 +571,7 @@ representation_from_to(customer_conducts_payment,agent_fixes_baggage_stickers,ab
 		 
 /**
  *
- * CONNECTOR
+ * Connector
  *
  */	
 
@@ -453,7 +581,7 @@ representation_from_to(agent_transfers_baggage_to_conveyor,check-in_with_baggage
 		 
 /**
  *
- * CONNECTOR
+ * Connector
  *
  */	
 
@@ -465,7 +593,7 @@ representation_from_to(purchase_of_baggage_possible,check-in_completed_without_e
 		 
 /**
  *
- * CONNECTOR
+ * Connector
  *
  */	
 
@@ -477,7 +605,7 @@ representation_from_to(customer_wants_to_purchase_extra_bag,check-in_completed_w
 		 
 /**
  *
- * CONNECTOR
+ * Connector
  *
  */	
 
@@ -487,7 +615,7 @@ representation_from_to(extra_baggage_in_addition_to_hand_luggage,check-in_comple
 		 
 /**
  *
- * CONNECTOR
+ * Connector
  *
  */	
 

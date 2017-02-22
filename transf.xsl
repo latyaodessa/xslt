@@ -6,13 +6,15 @@
 
 <xsl:template match="/">
 
-/**
+
+ 
+ <xsl:for-each select="ADOXML/MODELS/MODEL/MODELATTRIBUTES">
+ 
+ /**
  *
  * Model Attributes
  *
  */
- 
- <xsl:for-each select="ADOXML/MODELS/MODEL/MODELATTRIBUTES">
  
  <xsl:variable name="attrib" select="ATTRIBUTE[@name='Number of objects and relations']"/>
 <xsl:choose>
@@ -24,13 +26,13 @@ has_total_count_objects(<xsl:value-of select="$attrib"/>).
  
  </xsl:for-each>
 
-/**
+ <xsl:for-each select="ADOXML/MODELS/MODEL/INSTANCE">
+ 
+ /**
  *
  * Instance
  *
  */
-
- <xsl:for-each select="ADOXML/MODELS/MODEL/INSTANCE">
 
 <xsl:variable name="instance_name" select="
 									translate(
@@ -152,7 +154,7 @@ has_variable_type(<xsl:value-of select="concat($instance_name,',', $attrib)"/>).
 <xsl:for-each select="ADOXML/MODELS/MODEL/CONNECTOR">
 /**
  *
- * CONNECTOR
+ * Connector
  *
  */	
 <xsl:variable name="from" select="translate(

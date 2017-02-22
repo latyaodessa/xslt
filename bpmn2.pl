@@ -1,6 +1,6 @@
 
-
-/**
+ 
+ /**
  *
  * Model Attributes
  *
@@ -9,14 +9,14 @@
  
 has_total_count_objects(32).
 		 
-
-/**
+ 
+ /**
  *
  * Instance
  *
  */
 
- 
+
 instance_type(consult_physician,start_event).
 
 has_type(consult_physician,top-level).
@@ -25,6 +25,14 @@ has_position(consult_physician,node_x_4_5cm_y_8_5cm_index_1).
 		 
 has_order(consult_physician,0).
 		 
+ 
+ /**
+ *
+ * Instance
+ *
+ */
+
+
 instance_type(urgent_need,exclusive_gateway).
 
 has_type(urgent_need,data-based_(without_marker)).
@@ -37,6 +45,14 @@ has_variable_scope(urgent_need,global).
 		 
 has_variable_type(urgent_need,enumeration).
 		 
+ 
+ /**
+ *
+ * Instance
+ *
+ */
+
+
 instance_type(consult_physician_directly_by_phone,task).
 
 has_type(consult_physician_directly_by_phone,standard).
@@ -63,6 +79,14 @@ has_start_quantity(consult_physician_directly_by_phone,1).
 		 
 has_order(consult_physician_directly_by_phone,0).
 		 
+ 
+ /**
+ *
+ * Instance
+ *
+ */
+
+
 instance_type(consult_surgery,task).
 
 has_type(consult_surgery,standard).
@@ -89,6 +113,14 @@ has_start_quantity(consult_surgery,1).
 		 
 has_order(consult_surgery,0).
 		 
+ 
+ /**
+ *
+ * Instance
+ *
+ */
+
+
 instance_type(physician_assesses_need,task).
 
 has_type(physician_assesses_need,standard).
@@ -115,6 +147,14 @@ has_start_quantity(physician_assesses_need,1).
 		 
 has_order(physician_assesses_need,0).
 		 
+ 
+ /**
+ *
+ * Instance
+ *
+ */
+
+
 instance_type(immediate_medical_action_required,exclusive_gateway).
 
 has_type(immediate_medical_action_required,data-based_(without_marker)).
@@ -127,6 +167,14 @@ has_variable_scope(immediate_medical_action_required,global).
 		 
 has_variable_type(immediate_medical_action_required,enumeration).
 		 
+ 
+ /**
+ *
+ * Instance
+ *
+ */
+
+
 instance_type(physician_checks_self-availability,task).
 
 has_type(physician_checks_self-availability,standard).
@@ -153,6 +201,14 @@ has_start_quantity(physician_checks_self-availability,1).
 		 
 has_order(physician_checks_self-availability,0).
 		 
+ 
+ /**
+ *
+ * Instance
+ *
+ */
+
+
 instance_type(surgery_assistant_assigns_appointment,task).
 
 has_type(surgery_assistant_assigns_appointment,standard).
@@ -179,6 +235,14 @@ has_start_quantity(surgery_assistant_assigns_appointment,1).
 		 
 has_order(surgery_assistant_assigns_appointment,0).
 		 
+ 
+ /**
+ *
+ * Instance
+ *
+ */
+
+
 instance_type(physician_is_available,exclusive_gateway).
 
 has_type(physician_is_available,data-based_(without_marker)).
@@ -191,6 +255,14 @@ has_variable_scope(physician_is_available,global).
 		 
 has_variable_type(physician_is_available,enumeration).
 		 
+ 
+ /**
+ *
+ * Instance
+ *
+ */
+
+
 instance_type(physician_travels_to_patient,task).
 
 has_type(physician_travels_to_patient,standard).
@@ -217,6 +289,14 @@ has_start_quantity(physician_travels_to_patient,1).
 		 
 has_order(physician_travels_to_patient,0).
 		 
+ 
+ /**
+ *
+ * Instance
+ *
+ */
+
+
 instance_type(patient_is_treated,task).
 
 has_type(patient_is_treated,standard).
@@ -243,6 +323,14 @@ has_start_quantity(patient_is_treated,1).
 		 
 has_order(patient_is_treated,0).
 		 
+ 
+ /**
+ *
+ * Instance
+ *
+ */
+
+
 instance_type(physician_informs_ambulance,task).
 
 has_type(physician_informs_ambulance,standard).
@@ -269,6 +357,14 @@ has_start_quantity(physician_informs_ambulance,1).
 		 
 has_order(physician_informs_ambulance,0).
 		 
+ 
+ /**
+ *
+ * Instance
+ *
+ */
+
+
 instance_type(ambulance_travels_to_patient,task).
 
 has_type(ambulance_travels_to_patient,standard).
@@ -295,6 +391,14 @@ has_start_quantity(ambulance_travels_to_patient,1).
 		 
 has_order(ambulance_travels_to_patient,0).
 		 
+ 
+ /**
+ *
+ * Instance
+ *
+ */
+
+
 instance_type(patient_arrives_at_surgery_at_appointment,task).
 
 has_type(patient_arrives_at_surgery_at_appointment,standard).
@@ -321,6 +425,14 @@ has_start_quantity(patient_arrives_at_surgery_at_appointment,1).
 		 
 has_order(patient_arrives_at_surgery_at_appointment,0).
 		 
+ 
+ /**
+ *
+ * Instance
+ *
+ */
+
+
 instance_type(end_event-30744,end_event).
 
 has_type(end_event-30744,local).
@@ -331,7 +443,7 @@ has_order(end_event-30744,0).
 		 
 /**
  *
- * CONNECTOR
+ * Connector
  *
  */	
 
@@ -341,7 +453,7 @@ representation_from_to(consult_physician,urgent_need,above_below).
 		 
 /**
  *
- * CONNECTOR
+ * Connector
  *
  */	
 
@@ -353,7 +465,7 @@ representation_from_to(urgent_need,consult_physician_directly_by_phone,above_bel
 		 
 /**
  *
- * CONNECTOR
+ * Connector
  *
  */	
 
@@ -365,7 +477,7 @@ representation_from_to(urgent_need,consult_surgery,left_right).
 		 
 /**
  *
- * CONNECTOR
+ * Connector
  *
  */	
 
@@ -375,7 +487,7 @@ representation_from_to(consult_physician_directly_by_phone,physician_assesses_ne
 		 
 /**
  *
- * CONNECTOR
+ * Connector
  *
  */	
 
@@ -385,7 +497,7 @@ representation_from_to(physician_assesses_need,immediate_medical_action_required
 		 
 /**
  *
- * CONNECTOR
+ * Connector
  *
  */	
 
@@ -397,7 +509,7 @@ representation_from_to(immediate_medical_action_required,physician_checks_self-a
 		 
 /**
  *
- * CONNECTOR
+ * Connector
  *
  */	
 
@@ -407,7 +519,7 @@ representation_from_to(consult_surgery,surgery_assistant_assigns_appointment,abo
 		 
 /**
  *
- * CONNECTOR
+ * Connector
  *
  */	
 
@@ -419,7 +531,7 @@ representation_from_to(immediate_medical_action_required,surgery_assistant_assig
 		 
 /**
  *
- * CONNECTOR
+ * Connector
  *
  */	
 
@@ -429,7 +541,7 @@ representation_from_to(physician_checks_self-availability,physician_is_available
 		 
 /**
  *
- * CONNECTOR
+ * Connector
  *
  */	
 
@@ -441,7 +553,7 @@ representation_from_to(physician_is_available,physician_travels_to_patient,above
 		 
 /**
  *
- * CONNECTOR
+ * Connector
  *
  */	
 
@@ -451,7 +563,7 @@ representation_from_to(physician_travels_to_patient,patient_is_treated,above_bel
 		 
 /**
  *
- * CONNECTOR
+ * Connector
  *
  */	
 
@@ -463,7 +575,7 @@ representation_from_to(physician_is_available,physician_informs_ambulance,above_
 		 
 /**
  *
- * CONNECTOR
+ * Connector
  *
  */	
 
@@ -473,7 +585,7 @@ representation_from_to(physician_informs_ambulance,ambulance_travels_to_patient,
 		 
 /**
  *
- * CONNECTOR
+ * Connector
  *
  */	
 
@@ -483,7 +595,7 @@ representation_from_to(ambulance_travels_to_patient,patient_is_treated,above_bel
 		 
 /**
  *
- * CONNECTOR
+ * Connector
  *
  */	
 
@@ -493,7 +605,7 @@ representation_from_to(surgery_assistant_assigns_appointment,patient_arrives_at_
 		 
 /**
  *
- * CONNECTOR
+ * Connector
  *
  */	
 
@@ -503,7 +615,7 @@ representation_from_to(patient_arrives_at_surgery_at_appointment,patient_is_trea
 		 
 /**
  *
- * CONNECTOR
+ * Connector
  *
  */	
 
