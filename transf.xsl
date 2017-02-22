@@ -194,10 +194,20 @@ representation_from_to(<xsl:value-of select="concat($from,',', $to,',', $attrib)
  * RULES
  *
  */	
-
-show_all_attr(A):- instance_type(A,Class), 
+show_obj_attr(A):- instance_type(A,Class), 
 										has_type(A,Type),
 										has_position(A,Position),
+										has_order(A,Order),
+										write('Instance '), write(A), nl,
+										write('Class '), write(Class), nl,
+										write('Type '), write(Type), nl,
+										write('Position '), write(Position), nl,
+										write('Order '), write(Order), nl.
+ 
+show_task_all_attr(A):- instance_type(A,Class), 
+										has_type(A,Type),
+										has_position(A,Position),
+										has_order(A,Order),
 										has_execution_time(A,Execution), 
 										has_waiting_time(A,Waiting), 
 										has_resting_time(A,Resting), 
@@ -208,6 +218,7 @@ show_all_attr(A):- instance_type(A,Class),
 										write('Class '), write(Class), nl,
 										write('Type '), write(Type), nl,
 										write('Position '), write(Position), nl,
+										write('Order '), write(Order), nl,
 										write('Execution '), write(Execution), nl,
 										write('Waiting '), write(Waiting), nl,
 										write('Transport '), write(Transport), nl,
