@@ -949,8 +949,6 @@ show_max_start_period_of_task(A):- instance_type(A,task), has_max_start_period_y
 													write('max_start_period Time Hours '), write(Hours), nl,
 													write('max_start_period Time Minutes '), write(Minutes), nl,
 													write('max_start_period Time Seconds '), write(Seconds), nl.
-
-show_total_exec_time(A,B):- subsequent(A,C), show_total_exec_time(C,B).
 										
 /* show_total_exec_time(A,B):- subsequent(A,B),
 										has_execution_time(A,Execution1),

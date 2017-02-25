@@ -75,14 +75,6 @@ has_priority(<xsl:value-of select="concat($instance_name,',', $attrib)"/>).
 		 </xsl:when>
 		 <xsl:otherwise></xsl:otherwise>
 </xsl:choose>
-
-
-
-
-
-<!-- <xsl:variable name="attrib" select="translate(ATTRIBUTE[@name='Execution time'],':','_')"/> -->
-
-<!-- <xsl:variable name="attrib" select="substring-before(ATTRIBUTE[@name='Execution time'],':')"/> -->
 <xsl:variable name="attrib" select="ATTRIBUTE[@name='Execution time']"/>
 <xsl:variable name="years" select="substring($attrib,1,2)"/>
 <xsl:variable name="days" select="substring($attrib,4,3)"/>
@@ -340,8 +332,6 @@ show_max_start_period_of_task(A):- instance_type(A,task), has_max_start_period_y
 													write('max_start_period Time Hours '), write(Hours), nl,
 													write('max_start_period Time Minutes '), write(Minutes), nl,
 													write('max_start_period Time Seconds '), write(Seconds), nl.
-
-show_total_exec_time(A,B):- subsequent(A,C), show_total_exec_time(C,B).
 										
 /* show_total_exec_time(A,B):- subsequent(A,B),
 										has_execution_time(A,Execution1),
