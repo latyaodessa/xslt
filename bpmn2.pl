@@ -1,5 +1,7 @@
 
- 
+
+ :- style_check(-discontiguous).
+
  /**
  *
  * Model Attributes
@@ -61,19 +63,43 @@ has_position(consult_physician_directly_by_phone,node_x_12cm_y_8_5cm_w_3_36cm_h_
 		 
 has_priority(consult_physician_directly_by_phone,10).
 		 
-has_execution_time(consult_physician_directly_by_phone,00_000_00_00_00).
+has_execution_time_years(consult_physician_directly_by_phone,00).
+has_execution_time_days(consult_physician_directly_by_phone,000).
+has_execution_time_hours(consult_physician_directly_by_phone,00).
+has_execution_time_minutes(consult_physician_directly_by_phone,00).
+has_execution_time_seconds(consult_physician_directly_by_phone,00).
 		 
-has_waiting_time(consult_physician_directly_by_phone,00_000_00_00_00).
+has_waiting_time_years(consult_physician_directly_by_phone,00).
+has_waiting_time_days(consult_physician_directly_by_phone,000).
+has_waiting_time_hours(consult_physician_directly_by_phone,00).
+has_waiting_time_minutes(consult_physician_directly_by_phone,00).
+has_waiting_time_seconds(consult_physician_directly_by_phone,00).
 		 
-has_resting_time(consult_physician_directly_by_phone,00_000_00_00_00).
+has_resting_time_years(consult_physician_directly_by_phone,00).
+has_resting_time_days(consult_physician_directly_by_phone,000).
+has_resting_time_hours(consult_physician_directly_by_phone,00).
+has_resting_time_minutes(consult_physician_directly_by_phone,00).
+has_resting_time_seconds(consult_physician_directly_by_phone,00).
 		 
-has_transport_time(consult_physician_directly_by_phone,00_000_00_00_00).
+has_transport_time_years(consult_physician_directly_by_phone,00).
+has_transport_time_days(consult_physician_directly_by_phone,000).
+has_transport_time_hours(consult_physician_directly_by_phone,00).
+has_transport_time_minutes(consult_physician_directly_by_phone,00).
+has_transport_time_seconds(consult_physician_directly_by_phone,00).
 		 
-has_max_resource_waiting_time(consult_physician_directly_by_phone,00_000_00_05_00).
+has_max_resource_waiting_time_years(consult_physician_directly_by_phone,00).
+has_max_resource_waiting_time_days(consult_physician_directly_by_phone,000).
+has_max_resource_waiting_time_hours(consult_physician_directly_by_phone,00).
+has_max_resource_waiting_time_minutes(consult_physician_directly_by_phone,00).
+has_max_resource_waiting_time_seconds(consult_physician_directly_by_phone,05).
 		 
 has_min_quota_of_presence(consult_physician_directly_by_phone,100).
 		 
-has_max_start_period(consult_physician_directly_by_phone,00_001_00_00_00).
+has_max_start_period_years(consult_physician_directly_by_phone,00).
+has_max_start_period_days(consult_physician_directly_by_phone,001).
+has_max_start_period_hours(consult_physician_directly_by_phone,01).
+has_max_start_period_minutes(consult_physician_directly_by_phone,00).
+has_max_start_period_seconds(consult_physician_directly_by_phone,00).
 		 
 has_start_quantity(consult_physician_directly_by_phone,1).
 		 
@@ -95,19 +121,43 @@ has_position(consult_surgery,node_x_12cm_y_5_5cm_w_3_36cm_h_1_8cm_index_6).
 		 
 has_priority(consult_surgery,10).
 		 
-has_execution_time(consult_surgery,00_000_00_00_00).
+has_execution_time_years(consult_surgery,00).
+has_execution_time_days(consult_surgery,000).
+has_execution_time_hours(consult_surgery,00).
+has_execution_time_minutes(consult_surgery,00).
+has_execution_time_seconds(consult_surgery,00).
 		 
-has_waiting_time(consult_surgery,00_000_00_00_00).
+has_waiting_time_years(consult_surgery,00).
+has_waiting_time_days(consult_surgery,000).
+has_waiting_time_hours(consult_surgery,00).
+has_waiting_time_minutes(consult_surgery,00).
+has_waiting_time_seconds(consult_surgery,00).
 		 
-has_resting_time(consult_surgery,00_000_00_00_00).
+has_resting_time_years(consult_surgery,00).
+has_resting_time_days(consult_surgery,000).
+has_resting_time_hours(consult_surgery,00).
+has_resting_time_minutes(consult_surgery,00).
+has_resting_time_seconds(consult_surgery,00).
 		 
-has_transport_time(consult_surgery,00_000_00_00_00).
+has_transport_time_years(consult_surgery,00).
+has_transport_time_days(consult_surgery,000).
+has_transport_time_hours(consult_surgery,00).
+has_transport_time_minutes(consult_surgery,00).
+has_transport_time_seconds(consult_surgery,00).
 		 
-has_max_resource_waiting_time(consult_surgery,00_000_00_05_00).
+has_max_resource_waiting_time_years(consult_surgery,00).
+has_max_resource_waiting_time_days(consult_surgery,000).
+has_max_resource_waiting_time_hours(consult_surgery,00).
+has_max_resource_waiting_time_minutes(consult_surgery,00).
+has_max_resource_waiting_time_seconds(consult_surgery,05).
 		 
 has_min_quota_of_presence(consult_surgery,100).
 		 
-has_max_start_period(consult_surgery,00_001_00_00_00).
+has_max_start_period_years(consult_surgery,00).
+has_max_start_period_days(consult_surgery,001).
+has_max_start_period_hours(consult_surgery,01).
+has_max_start_period_minutes(consult_surgery,00).
+has_max_start_period_seconds(consult_surgery,00).
 		 
 has_start_quantity(consult_surgery,1).
 		 
@@ -129,19 +179,43 @@ has_position(physician_assesses_need,node_x_17_5cm_y_8_5cm_w_3_36cm_h_1_8cm_inde
 		 
 has_priority(physician_assesses_need,10).
 		 
-has_execution_time(physician_assesses_need,00_000_00_00_00).
+has_execution_time_years(physician_assesses_need,00).
+has_execution_time_days(physician_assesses_need,000).
+has_execution_time_hours(physician_assesses_need,00).
+has_execution_time_minutes(physician_assesses_need,00).
+has_execution_time_seconds(physician_assesses_need,00).
 		 
-has_waiting_time(physician_assesses_need,00_000_00_00_00).
+has_waiting_time_years(physician_assesses_need,00).
+has_waiting_time_days(physician_assesses_need,000).
+has_waiting_time_hours(physician_assesses_need,00).
+has_waiting_time_minutes(physician_assesses_need,00).
+has_waiting_time_seconds(physician_assesses_need,00).
 		 
-has_resting_time(physician_assesses_need,00_000_00_00_00).
+has_resting_time_years(physician_assesses_need,00).
+has_resting_time_days(physician_assesses_need,000).
+has_resting_time_hours(physician_assesses_need,00).
+has_resting_time_minutes(physician_assesses_need,00).
+has_resting_time_seconds(physician_assesses_need,00).
 		 
-has_transport_time(physician_assesses_need,00_000_00_00_00).
+has_transport_time_years(physician_assesses_need,00).
+has_transport_time_days(physician_assesses_need,000).
+has_transport_time_hours(physician_assesses_need,00).
+has_transport_time_minutes(physician_assesses_need,00).
+has_transport_time_seconds(physician_assesses_need,00).
 		 
-has_max_resource_waiting_time(physician_assesses_need,00_000_00_05_00).
+has_max_resource_waiting_time_years(physician_assesses_need,00).
+has_max_resource_waiting_time_days(physician_assesses_need,000).
+has_max_resource_waiting_time_hours(physician_assesses_need,00).
+has_max_resource_waiting_time_minutes(physician_assesses_need,00).
+has_max_resource_waiting_time_seconds(physician_assesses_need,05).
 		 
 has_min_quota_of_presence(physician_assesses_need,100).
 		 
-has_max_start_period(physician_assesses_need,00_001_00_00_00).
+has_max_start_period_years(physician_assesses_need,00).
+has_max_start_period_days(physician_assesses_need,001).
+has_max_start_period_hours(physician_assesses_need,01).
+has_max_start_period_minutes(physician_assesses_need,00).
+has_max_start_period_seconds(physician_assesses_need,00).
 		 
 has_start_quantity(physician_assesses_need,1).
 		 
@@ -183,19 +257,43 @@ has_position(physician_checks_self-availability,node_x_26cm_y_8_5cm_w_3_36cm_h_1
 		 
 has_priority(physician_checks_self-availability,10).
 		 
-has_execution_time(physician_checks_self-availability,00_000_00_00_00).
+has_execution_time_years(physician_checks_self-availability,00).
+has_execution_time_days(physician_checks_self-availability,000).
+has_execution_time_hours(physician_checks_self-availability,00).
+has_execution_time_minutes(physician_checks_self-availability,00).
+has_execution_time_seconds(physician_checks_self-availability,00).
 		 
-has_waiting_time(physician_checks_self-availability,00_000_00_00_00).
+has_waiting_time_years(physician_checks_self-availability,00).
+has_waiting_time_days(physician_checks_self-availability,000).
+has_waiting_time_hours(physician_checks_self-availability,00).
+has_waiting_time_minutes(physician_checks_self-availability,00).
+has_waiting_time_seconds(physician_checks_self-availability,00).
 		 
-has_resting_time(physician_checks_self-availability,00_000_00_00_00).
+has_resting_time_years(physician_checks_self-availability,00).
+has_resting_time_days(physician_checks_self-availability,000).
+has_resting_time_hours(physician_checks_self-availability,00).
+has_resting_time_minutes(physician_checks_self-availability,00).
+has_resting_time_seconds(physician_checks_self-availability,00).
 		 
-has_transport_time(physician_checks_self-availability,00_000_00_00_00).
+has_transport_time_years(physician_checks_self-availability,00).
+has_transport_time_days(physician_checks_self-availability,000).
+has_transport_time_hours(physician_checks_self-availability,00).
+has_transport_time_minutes(physician_checks_self-availability,00).
+has_transport_time_seconds(physician_checks_self-availability,00).
 		 
-has_max_resource_waiting_time(physician_checks_self-availability,00_000_00_05_00).
+has_max_resource_waiting_time_years(physician_checks_self-availability,00).
+has_max_resource_waiting_time_days(physician_checks_self-availability,000).
+has_max_resource_waiting_time_hours(physician_checks_self-availability,00).
+has_max_resource_waiting_time_minutes(physician_checks_self-availability,00).
+has_max_resource_waiting_time_seconds(physician_checks_self-availability,05).
 		 
 has_min_quota_of_presence(physician_checks_self-availability,100).
 		 
-has_max_start_period(physician_checks_self-availability,00_001_00_00_00).
+has_max_start_period_years(physician_checks_self-availability,00).
+has_max_start_period_days(physician_checks_self-availability,001).
+has_max_start_period_hours(physician_checks_self-availability,01).
+has_max_start_period_minutes(physician_checks_self-availability,00).
+has_max_start_period_seconds(physician_checks_self-availability,00).
 		 
 has_start_quantity(physician_checks_self-availability,1).
 		 
@@ -217,19 +315,43 @@ has_position(surgery_assistant_assigns_appointment,node_x_26cm_y_5_5cm_w_3_36cm_
 		 
 has_priority(surgery_assistant_assigns_appointment,10).
 		 
-has_execution_time(surgery_assistant_assigns_appointment,00_000_00_00_00).
+has_execution_time_years(surgery_assistant_assigns_appointment,00).
+has_execution_time_days(surgery_assistant_assigns_appointment,000).
+has_execution_time_hours(surgery_assistant_assigns_appointment,00).
+has_execution_time_minutes(surgery_assistant_assigns_appointment,00).
+has_execution_time_seconds(surgery_assistant_assigns_appointment,00).
 		 
-has_waiting_time(surgery_assistant_assigns_appointment,00_000_00_00_00).
+has_waiting_time_years(surgery_assistant_assigns_appointment,00).
+has_waiting_time_days(surgery_assistant_assigns_appointment,000).
+has_waiting_time_hours(surgery_assistant_assigns_appointment,00).
+has_waiting_time_minutes(surgery_assistant_assigns_appointment,00).
+has_waiting_time_seconds(surgery_assistant_assigns_appointment,00).
 		 
-has_resting_time(surgery_assistant_assigns_appointment,00_000_00_00_00).
+has_resting_time_years(surgery_assistant_assigns_appointment,00).
+has_resting_time_days(surgery_assistant_assigns_appointment,000).
+has_resting_time_hours(surgery_assistant_assigns_appointment,00).
+has_resting_time_minutes(surgery_assistant_assigns_appointment,00).
+has_resting_time_seconds(surgery_assistant_assigns_appointment,00).
 		 
-has_transport_time(surgery_assistant_assigns_appointment,00_000_00_00_00).
+has_transport_time_years(surgery_assistant_assigns_appointment,00).
+has_transport_time_days(surgery_assistant_assigns_appointment,000).
+has_transport_time_hours(surgery_assistant_assigns_appointment,00).
+has_transport_time_minutes(surgery_assistant_assigns_appointment,00).
+has_transport_time_seconds(surgery_assistant_assigns_appointment,00).
 		 
-has_max_resource_waiting_time(surgery_assistant_assigns_appointment,00_000_00_05_00).
+has_max_resource_waiting_time_years(surgery_assistant_assigns_appointment,00).
+has_max_resource_waiting_time_days(surgery_assistant_assigns_appointment,000).
+has_max_resource_waiting_time_hours(surgery_assistant_assigns_appointment,00).
+has_max_resource_waiting_time_minutes(surgery_assistant_assigns_appointment,00).
+has_max_resource_waiting_time_seconds(surgery_assistant_assigns_appointment,05).
 		 
 has_min_quota_of_presence(surgery_assistant_assigns_appointment,100).
 		 
-has_max_start_period(surgery_assistant_assigns_appointment,00_001_00_00_00).
+has_max_start_period_years(surgery_assistant_assigns_appointment,00).
+has_max_start_period_days(surgery_assistant_assigns_appointment,001).
+has_max_start_period_hours(surgery_assistant_assigns_appointment,01).
+has_max_start_period_minutes(surgery_assistant_assigns_appointment,00).
+has_max_start_period_seconds(surgery_assistant_assigns_appointment,00).
 		 
 has_start_quantity(surgery_assistant_assigns_appointment,1).
 		 
@@ -271,19 +393,43 @@ has_position(physician_travels_to_patient,node_x_35_5cm_y_8_5cm_w_3_36cm_h_1_8cm
 		 
 has_priority(physician_travels_to_patient,10).
 		 
-has_execution_time(physician_travels_to_patient,00_000_00_00_00).
+has_execution_time_years(physician_travels_to_patient,00).
+has_execution_time_days(physician_travels_to_patient,000).
+has_execution_time_hours(physician_travels_to_patient,00).
+has_execution_time_minutes(physician_travels_to_patient,00).
+has_execution_time_seconds(physician_travels_to_patient,00).
 		 
-has_waiting_time(physician_travels_to_patient,00_000_00_00_00).
+has_waiting_time_years(physician_travels_to_patient,00).
+has_waiting_time_days(physician_travels_to_patient,000).
+has_waiting_time_hours(physician_travels_to_patient,00).
+has_waiting_time_minutes(physician_travels_to_patient,00).
+has_waiting_time_seconds(physician_travels_to_patient,00).
 		 
-has_resting_time(physician_travels_to_patient,00_000_00_00_00).
+has_resting_time_years(physician_travels_to_patient,00).
+has_resting_time_days(physician_travels_to_patient,000).
+has_resting_time_hours(physician_travels_to_patient,00).
+has_resting_time_minutes(physician_travels_to_patient,00).
+has_resting_time_seconds(physician_travels_to_patient,00).
 		 
-has_transport_time(physician_travels_to_patient,00_000_00_00_00).
+has_transport_time_years(physician_travels_to_patient,00).
+has_transport_time_days(physician_travels_to_patient,000).
+has_transport_time_hours(physician_travels_to_patient,00).
+has_transport_time_minutes(physician_travels_to_patient,00).
+has_transport_time_seconds(physician_travels_to_patient,00).
 		 
-has_max_resource_waiting_time(physician_travels_to_patient,00_000_00_05_00).
+has_max_resource_waiting_time_years(physician_travels_to_patient,00).
+has_max_resource_waiting_time_days(physician_travels_to_patient,000).
+has_max_resource_waiting_time_hours(physician_travels_to_patient,00).
+has_max_resource_waiting_time_minutes(physician_travels_to_patient,00).
+has_max_resource_waiting_time_seconds(physician_travels_to_patient,05).
 		 
 has_min_quota_of_presence(physician_travels_to_patient,100).
 		 
-has_max_start_period(physician_travels_to_patient,00_001_00_00_00).
+has_max_start_period_years(physician_travels_to_patient,00).
+has_max_start_period_days(physician_travels_to_patient,001).
+has_max_start_period_hours(physician_travels_to_patient,01).
+has_max_start_period_minutes(physician_travels_to_patient,00).
+has_max_start_period_seconds(physician_travels_to_patient,00).
 		 
 has_start_quantity(physician_travels_to_patient,1).
 		 
@@ -305,19 +451,43 @@ has_position(patient_is_treated,node_x_44cm_y_8_5cm_w_3_36cm_h_1_8cm_index_21).
 		 
 has_priority(patient_is_treated,10).
 		 
-has_execution_time(patient_is_treated,00_000_00_00_00).
+has_execution_time_years(patient_is_treated,00).
+has_execution_time_days(patient_is_treated,000).
+has_execution_time_hours(patient_is_treated,00).
+has_execution_time_minutes(patient_is_treated,00).
+has_execution_time_seconds(patient_is_treated,00).
 		 
-has_waiting_time(patient_is_treated,00_000_00_00_00).
+has_waiting_time_years(patient_is_treated,00).
+has_waiting_time_days(patient_is_treated,000).
+has_waiting_time_hours(patient_is_treated,00).
+has_waiting_time_minutes(patient_is_treated,00).
+has_waiting_time_seconds(patient_is_treated,00).
 		 
-has_resting_time(patient_is_treated,00_000_00_00_00).
+has_resting_time_years(patient_is_treated,00).
+has_resting_time_days(patient_is_treated,000).
+has_resting_time_hours(patient_is_treated,00).
+has_resting_time_minutes(patient_is_treated,00).
+has_resting_time_seconds(patient_is_treated,00).
 		 
-has_transport_time(patient_is_treated,00_000_00_00_00).
+has_transport_time_years(patient_is_treated,00).
+has_transport_time_days(patient_is_treated,000).
+has_transport_time_hours(patient_is_treated,00).
+has_transport_time_minutes(patient_is_treated,00).
+has_transport_time_seconds(patient_is_treated,00).
 		 
-has_max_resource_waiting_time(patient_is_treated,00_000_00_05_00).
+has_max_resource_waiting_time_years(patient_is_treated,00).
+has_max_resource_waiting_time_days(patient_is_treated,000).
+has_max_resource_waiting_time_hours(patient_is_treated,00).
+has_max_resource_waiting_time_minutes(patient_is_treated,00).
+has_max_resource_waiting_time_seconds(patient_is_treated,05).
 		 
 has_min_quota_of_presence(patient_is_treated,100).
 		 
-has_max_start_period(patient_is_treated,00_001_00_00_00).
+has_max_start_period_years(patient_is_treated,00).
+has_max_start_period_days(patient_is_treated,001).
+has_max_start_period_hours(patient_is_treated,01).
+has_max_start_period_minutes(patient_is_treated,00).
+has_max_start_period_seconds(patient_is_treated,00).
 		 
 has_start_quantity(patient_is_treated,1).
 		 
@@ -339,19 +509,43 @@ has_position(physician_informs_ambulance,node_x_35_5cm_y_11_5cm_w_3_36cm_h_1_8cm
 		 
 has_priority(physician_informs_ambulance,10).
 		 
-has_execution_time(physician_informs_ambulance,00_000_00_00_00).
+has_execution_time_years(physician_informs_ambulance,00).
+has_execution_time_days(physician_informs_ambulance,000).
+has_execution_time_hours(physician_informs_ambulance,00).
+has_execution_time_minutes(physician_informs_ambulance,00).
+has_execution_time_seconds(physician_informs_ambulance,00).
 		 
-has_waiting_time(physician_informs_ambulance,00_000_00_00_00).
+has_waiting_time_years(physician_informs_ambulance,00).
+has_waiting_time_days(physician_informs_ambulance,000).
+has_waiting_time_hours(physician_informs_ambulance,00).
+has_waiting_time_minutes(physician_informs_ambulance,00).
+has_waiting_time_seconds(physician_informs_ambulance,00).
 		 
-has_resting_time(physician_informs_ambulance,00_000_00_00_00).
+has_resting_time_years(physician_informs_ambulance,00).
+has_resting_time_days(physician_informs_ambulance,000).
+has_resting_time_hours(physician_informs_ambulance,00).
+has_resting_time_minutes(physician_informs_ambulance,00).
+has_resting_time_seconds(physician_informs_ambulance,00).
 		 
-has_transport_time(physician_informs_ambulance,00_000_00_00_00).
+has_transport_time_years(physician_informs_ambulance,00).
+has_transport_time_days(physician_informs_ambulance,000).
+has_transport_time_hours(physician_informs_ambulance,00).
+has_transport_time_minutes(physician_informs_ambulance,00).
+has_transport_time_seconds(physician_informs_ambulance,00).
 		 
-has_max_resource_waiting_time(physician_informs_ambulance,00_000_00_05_00).
+has_max_resource_waiting_time_years(physician_informs_ambulance,00).
+has_max_resource_waiting_time_days(physician_informs_ambulance,000).
+has_max_resource_waiting_time_hours(physician_informs_ambulance,00).
+has_max_resource_waiting_time_minutes(physician_informs_ambulance,00).
+has_max_resource_waiting_time_seconds(physician_informs_ambulance,05).
 		 
 has_min_quota_of_presence(physician_informs_ambulance,100).
 		 
-has_max_start_period(physician_informs_ambulance,00_001_00_00_00).
+has_max_start_period_years(physician_informs_ambulance,00).
+has_max_start_period_days(physician_informs_ambulance,001).
+has_max_start_period_hours(physician_informs_ambulance,01).
+has_max_start_period_minutes(physician_informs_ambulance,00).
+has_max_start_period_seconds(physician_informs_ambulance,00).
 		 
 has_start_quantity(physician_informs_ambulance,1).
 		 
@@ -373,19 +567,43 @@ has_position(ambulance_travels_to_patient,node_x_40cm_y_11_5cm_w_3_36cm_h_1_8cm_
 		 
 has_priority(ambulance_travels_to_patient,10).
 		 
-has_execution_time(ambulance_travels_to_patient,00_000_00_00_00).
+has_execution_time_years(ambulance_travels_to_patient,00).
+has_execution_time_days(ambulance_travels_to_patient,000).
+has_execution_time_hours(ambulance_travels_to_patient,00).
+has_execution_time_minutes(ambulance_travels_to_patient,00).
+has_execution_time_seconds(ambulance_travels_to_patient,00).
 		 
-has_waiting_time(ambulance_travels_to_patient,00_000_00_00_00).
+has_waiting_time_years(ambulance_travels_to_patient,00).
+has_waiting_time_days(ambulance_travels_to_patient,000).
+has_waiting_time_hours(ambulance_travels_to_patient,00).
+has_waiting_time_minutes(ambulance_travels_to_patient,00).
+has_waiting_time_seconds(ambulance_travels_to_patient,00).
 		 
-has_resting_time(ambulance_travels_to_patient,00_000_00_00_00).
+has_resting_time_years(ambulance_travels_to_patient,00).
+has_resting_time_days(ambulance_travels_to_patient,000).
+has_resting_time_hours(ambulance_travels_to_patient,00).
+has_resting_time_minutes(ambulance_travels_to_patient,00).
+has_resting_time_seconds(ambulance_travels_to_patient,00).
 		 
-has_transport_time(ambulance_travels_to_patient,00_000_00_00_00).
+has_transport_time_years(ambulance_travels_to_patient,00).
+has_transport_time_days(ambulance_travels_to_patient,000).
+has_transport_time_hours(ambulance_travels_to_patient,00).
+has_transport_time_minutes(ambulance_travels_to_patient,00).
+has_transport_time_seconds(ambulance_travels_to_patient,00).
 		 
-has_max_resource_waiting_time(ambulance_travels_to_patient,00_000_00_05_00).
+has_max_resource_waiting_time_years(ambulance_travels_to_patient,00).
+has_max_resource_waiting_time_days(ambulance_travels_to_patient,000).
+has_max_resource_waiting_time_hours(ambulance_travels_to_patient,00).
+has_max_resource_waiting_time_minutes(ambulance_travels_to_patient,00).
+has_max_resource_waiting_time_seconds(ambulance_travels_to_patient,05).
 		 
 has_min_quota_of_presence(ambulance_travels_to_patient,100).
 		 
-has_max_start_period(ambulance_travels_to_patient,00_001_00_00_00).
+has_max_start_period_years(ambulance_travels_to_patient,00).
+has_max_start_period_days(ambulance_travels_to_patient,001).
+has_max_start_period_hours(ambulance_travels_to_patient,01).
+has_max_start_period_minutes(ambulance_travels_to_patient,00).
+has_max_start_period_seconds(ambulance_travels_to_patient,00).
 		 
 has_start_quantity(ambulance_travels_to_patient,1).
 		 
@@ -407,19 +625,43 @@ has_position(patient_arrives_at_surgery_at_appointment,node_x_35_5cm_y_5_5cm_w_3
 		 
 has_priority(patient_arrives_at_surgery_at_appointment,10).
 		 
-has_execution_time(patient_arrives_at_surgery_at_appointment,00_000_00_00_00).
+has_execution_time_years(patient_arrives_at_surgery_at_appointment,00).
+has_execution_time_days(patient_arrives_at_surgery_at_appointment,000).
+has_execution_time_hours(patient_arrives_at_surgery_at_appointment,00).
+has_execution_time_minutes(patient_arrives_at_surgery_at_appointment,00).
+has_execution_time_seconds(patient_arrives_at_surgery_at_appointment,00).
 		 
-has_waiting_time(patient_arrives_at_surgery_at_appointment,00_000_00_00_00).
+has_waiting_time_years(patient_arrives_at_surgery_at_appointment,00).
+has_waiting_time_days(patient_arrives_at_surgery_at_appointment,000).
+has_waiting_time_hours(patient_arrives_at_surgery_at_appointment,00).
+has_waiting_time_minutes(patient_arrives_at_surgery_at_appointment,00).
+has_waiting_time_seconds(patient_arrives_at_surgery_at_appointment,00).
 		 
-has_resting_time(patient_arrives_at_surgery_at_appointment,00_000_00_00_00).
+has_resting_time_years(patient_arrives_at_surgery_at_appointment,00).
+has_resting_time_days(patient_arrives_at_surgery_at_appointment,000).
+has_resting_time_hours(patient_arrives_at_surgery_at_appointment,00).
+has_resting_time_minutes(patient_arrives_at_surgery_at_appointment,00).
+has_resting_time_seconds(patient_arrives_at_surgery_at_appointment,00).
 		 
-has_transport_time(patient_arrives_at_surgery_at_appointment,00_000_00_00_00).
+has_transport_time_years(patient_arrives_at_surgery_at_appointment,00).
+has_transport_time_days(patient_arrives_at_surgery_at_appointment,000).
+has_transport_time_hours(patient_arrives_at_surgery_at_appointment,00).
+has_transport_time_minutes(patient_arrives_at_surgery_at_appointment,00).
+has_transport_time_seconds(patient_arrives_at_surgery_at_appointment,00).
 		 
-has_max_resource_waiting_time(patient_arrives_at_surgery_at_appointment,00_000_00_05_00).
+has_max_resource_waiting_time_years(patient_arrives_at_surgery_at_appointment,00).
+has_max_resource_waiting_time_days(patient_arrives_at_surgery_at_appointment,000).
+has_max_resource_waiting_time_hours(patient_arrives_at_surgery_at_appointment,00).
+has_max_resource_waiting_time_minutes(patient_arrives_at_surgery_at_appointment,00).
+has_max_resource_waiting_time_seconds(patient_arrives_at_surgery_at_appointment,05).
 		 
 has_min_quota_of_presence(patient_arrives_at_surgery_at_appointment,100).
 		 
-has_max_start_period(patient_arrives_at_surgery_at_appointment,00_001_00_00_00).
+has_max_start_period_years(patient_arrives_at_surgery_at_appointment,00).
+has_max_start_period_days(patient_arrives_at_surgery_at_appointment,001).
+has_max_start_period_hours(patient_arrives_at_surgery_at_appointment,01).
+has_max_start_period_minutes(patient_arrives_at_surgery_at_appointment,00).
+has_max_start_period_seconds(patient_arrives_at_surgery_at_appointment,00).
 		 
 has_start_quantity(patient_arrives_at_surgery_at_appointment,1).
 		 
@@ -640,26 +882,6 @@ show_obj_attr(A):- instance_type(A,Class),
 										write('Position '), write(Position), nl,
 										write('Order '), write(Order), nl.
  
-show_task_all_attr(A):- instance_type(A,Class), 
-										has_type(A,Type),
-										has_position(A,Position),
-										has_order(A,Order),
-										has_execution_time(A,Execution), 
-										has_waiting_time(A,Waiting), 
-										has_resting_time(A,Resting), 
-										has_transport_time(A,Transport),
-										has_max_resource_waiting_time(A,Max_wait),
-										has_max_start_period(A,Max_start),
-										write('Instance '), write(A), nl,
-										write('Class '), write(Class), nl,
-										write('Type '), write(Type), nl,
-										write('Position '), write(Position), nl,
-										write('Order '), write(Order), nl,
-										write('Execution '), write(Execution), nl,
-										write('Waiting '), write(Waiting), nl,
-										write('Transport '), write(Transport), nl,
-										write('Max_start '), write(Max_start), nl,
-										write('Max_wait '), write(Max_wait), nl.
 
 path_exist(A,B):- subsequent(A,B).										
 path_exist(A,B):- subsequent(A,Z), path_exist(Z,B).
@@ -670,7 +892,65 @@ show_path(A,B):- subsequent(A,B),
 show_path(A,B):- subsequent(A,Z), 
 										write('From '), write(A), nl,
 										write('To '), write(Z), nl,
-										show_path(Z,B).			
+										show_path(Z,B).		
+
+show_exec_time_of_task(A):- instance_type(A,task), has_execution_time_years(A,Years), has_execution_time_days(A, Days),
+													has_execution_time_hours(A,Hours), has_execution_time_minutes(A,Minutes),
+													has_execution_time_seconds(A,Seconds),
+													write('Execution Time Years '), write(Years), nl,
+													write('Execution Time Days '), write(Days), nl,
+													write('Execution Time Hours '), write(Hours), nl,
+													write('Execution Time Minutes '), write(Minutes), nl,
+													write('Execution Time Seconds '), write(Seconds), nl.
+
+show_waiting_time_of_task(A):- instance_type(A,task), has_waiting_time_years(A,Years), has_waiting_time_days(A, Days),
+													has_waiting_time_hours(A,Hours), has_waiting_time_minutes(A,Minutes),
+													has_waiting_time_seconds(A,Seconds),
+													write('Waiting Time Years '), write(Years), nl,
+													write('Waiting Time Days '), write(Days), nl,
+													write('Waiting Time Hours '), write(Hours), nl,
+													write('Waiting Time Minutes '), write(Minutes), nl,
+													write('Waiting Time Seconds '), write(Seconds), nl.
+
+show_resting_time_of_task(A):- instance_type(A,task), has_resting_time_years(A,Years), has_resting_time_days(A, Days),
+													has_resting_time_hours(A,Hours), has_resting_time_minutes(A,Minutes),
+													has_resting_time_seconds(A,Seconds),
+													write('resting Time Years '), write(Years), nl,
+													write('resting Time Days '), write(Days), nl,
+													write('resting Time Hours '), write(Hours), nl,
+													write('resting Time Minutes '), write(Minutes), nl,
+													write('resting Time Seconds '), write(Seconds), nl.
+
+show_transport_time_of_task(A):- instance_type(A,task), has_transport_time_years(A,Years), has_transport_time_days(A, Days),
+													has_transport_time_hours(A,Hours), has_transport_time_minutes(A,Minutes),
+													has_transport_time_seconds(A,Seconds),
+													write('transport Time Years '), write(Years), nl,
+													write('transport Time Days '), write(Days), nl,
+													write('transport Time Hours '), write(Hours), nl,
+													write('transport Time Minutes '), write(Minutes), nl,
+													write('transport Time Seconds '), write(Seconds), nl.
+
+show_max_resource_waiting_time_of_task(A):- instance_type(A,task),
+													 has_max_resource_waiting_time_years(A,Years),
+													 has_max_resource_waiting_time_days(A, Days),
+													has_max_resource_waiting_time_hours(A,Hours), has_max_resource_waiting_time_minutes(A,Minutes),
+													has_max_resource_waiting_time_seconds(A,Seconds),
+													write('max_resource_waiting Time Years '), write(Years), nl,
+													write('max_resource_waiting Time Days '), write(Days), nl,
+													write('max_resource_waiting Time Hours '), write(Hours), nl,
+													write('max_resource_waiting Time Minutes '), write(Minutes), nl,
+													write('max_resource_waiting Time Seconds '), write(Seconds), nl.
+
+show_max_start_period_of_task(A):- instance_type(A,task), has_max_start_period_years(A,Years), has_max_start_period_days(A, Days),
+													has_max_start_period_hours(A,Hours), has_max_start_period_minutes(A,Minutes),
+													has_max_start_period_seconds(A,Seconds),
+													write('max_start_period Time Years '), write(Years), nl,
+													write('max_start_period Time Days '), write(Days), nl,
+													write('max_start_period Time Hours '), write(Hours), nl,
+													write('max_start_period Time Minutes '), write(Minutes), nl,
+													write('max_start_period Time Seconds '), write(Seconds), nl.
+
+show_total_exec_time(A,B):- subsequent(A,C), show_total_exec_time(C,B).
 										
 /* show_total_exec_time(A,B):- subsequent(A,B),
 										has_execution_time(A,Execution1),

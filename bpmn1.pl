@@ -1,5 +1,7 @@
 
- 
+
+ :- style_check(-discontiguous).
+
  /**
  *
  * Model Attributes
@@ -61,19 +63,43 @@ has_position(conduct_check-in_at_check-in_machine,node_x_12cm_y_9_5cm_w_3_36cm_h
 		 
 has_priority(conduct_check-in_at_check-in_machine,10).
 		 
-has_execution_time(conduct_check-in_at_check-in_machine,00_000_00_00_00).
+has_execution_time_years(conduct_check-in_at_check-in_machine,00).
+has_execution_time_days(conduct_check-in_at_check-in_machine,000).
+has_execution_time_hours(conduct_check-in_at_check-in_machine,00).
+has_execution_time_minutes(conduct_check-in_at_check-in_machine,00).
+has_execution_time_seconds(conduct_check-in_at_check-in_machine,00).
 		 
-has_waiting_time(conduct_check-in_at_check-in_machine,00_000_00_00_00).
+has_waiting_time_years(conduct_check-in_at_check-in_machine,00).
+has_waiting_time_days(conduct_check-in_at_check-in_machine,000).
+has_waiting_time_hours(conduct_check-in_at_check-in_machine,00).
+has_waiting_time_minutes(conduct_check-in_at_check-in_machine,00).
+has_waiting_time_seconds(conduct_check-in_at_check-in_machine,00).
 		 
-has_resting_time(conduct_check-in_at_check-in_machine,00_000_00_00_00).
+has_resting_time_years(conduct_check-in_at_check-in_machine,00).
+has_resting_time_days(conduct_check-in_at_check-in_machine,000).
+has_resting_time_hours(conduct_check-in_at_check-in_machine,00).
+has_resting_time_minutes(conduct_check-in_at_check-in_machine,00).
+has_resting_time_seconds(conduct_check-in_at_check-in_machine,00).
 		 
-has_transport_time(conduct_check-in_at_check-in_machine,00_000_00_00_00).
+has_transport_time_years(conduct_check-in_at_check-in_machine,00).
+has_transport_time_days(conduct_check-in_at_check-in_machine,000).
+has_transport_time_hours(conduct_check-in_at_check-in_machine,00).
+has_transport_time_minutes(conduct_check-in_at_check-in_machine,00).
+has_transport_time_seconds(conduct_check-in_at_check-in_machine,00).
 		 
-has_max_resource_waiting_time(conduct_check-in_at_check-in_machine,00_000_00_05_00).
+has_max_resource_waiting_time_years(conduct_check-in_at_check-in_machine,00).
+has_max_resource_waiting_time_days(conduct_check-in_at_check-in_machine,000).
+has_max_resource_waiting_time_hours(conduct_check-in_at_check-in_machine,00).
+has_max_resource_waiting_time_minutes(conduct_check-in_at_check-in_machine,00).
+has_max_resource_waiting_time_seconds(conduct_check-in_at_check-in_machine,05).
 		 
 has_min_quota_of_presence(conduct_check-in_at_check-in_machine,100).
 		 
-has_max_start_period(conduct_check-in_at_check-in_machine,00_001_00_00_00).
+has_max_start_period_years(conduct_check-in_at_check-in_machine,00).
+has_max_start_period_days(conduct_check-in_at_check-in_machine,001).
+has_max_start_period_hours(conduct_check-in_at_check-in_machine,01).
+has_max_start_period_minutes(conduct_check-in_at_check-in_machine,00).
+has_max_start_period_seconds(conduct_check-in_at_check-in_machine,00).
 		 
 has_start_quantity(conduct_check-in_at_check-in_machine,1).
 		 
@@ -115,19 +141,43 @@ has_position(queue_in_for_baggage_drop-off,node_x_21_5cm_y_9_5cm_w_3_36cm_h_1_8c
 		 
 has_priority(queue_in_for_baggage_drop-off,10).
 		 
-has_execution_time(queue_in_for_baggage_drop-off,00_000_00_00_00).
+has_execution_time_years(queue_in_for_baggage_drop-off,00).
+has_execution_time_days(queue_in_for_baggage_drop-off,000).
+has_execution_time_hours(queue_in_for_baggage_drop-off,00).
+has_execution_time_minutes(queue_in_for_baggage_drop-off,00).
+has_execution_time_seconds(queue_in_for_baggage_drop-off,00).
 		 
-has_waiting_time(queue_in_for_baggage_drop-off,00_000_00_00_00).
+has_waiting_time_years(queue_in_for_baggage_drop-off,00).
+has_waiting_time_days(queue_in_for_baggage_drop-off,000).
+has_waiting_time_hours(queue_in_for_baggage_drop-off,00).
+has_waiting_time_minutes(queue_in_for_baggage_drop-off,00).
+has_waiting_time_seconds(queue_in_for_baggage_drop-off,00).
 		 
-has_resting_time(queue_in_for_baggage_drop-off,00_000_00_00_00).
+has_resting_time_years(queue_in_for_baggage_drop-off,00).
+has_resting_time_days(queue_in_for_baggage_drop-off,000).
+has_resting_time_hours(queue_in_for_baggage_drop-off,00).
+has_resting_time_minutes(queue_in_for_baggage_drop-off,00).
+has_resting_time_seconds(queue_in_for_baggage_drop-off,00).
 		 
-has_transport_time(queue_in_for_baggage_drop-off,00_000_00_00_00).
+has_transport_time_years(queue_in_for_baggage_drop-off,00).
+has_transport_time_days(queue_in_for_baggage_drop-off,000).
+has_transport_time_hours(queue_in_for_baggage_drop-off,00).
+has_transport_time_minutes(queue_in_for_baggage_drop-off,00).
+has_transport_time_seconds(queue_in_for_baggage_drop-off,00).
 		 
-has_max_resource_waiting_time(queue_in_for_baggage_drop-off,00_000_00_05_00).
+has_max_resource_waiting_time_years(queue_in_for_baggage_drop-off,00).
+has_max_resource_waiting_time_days(queue_in_for_baggage_drop-off,000).
+has_max_resource_waiting_time_hours(queue_in_for_baggage_drop-off,00).
+has_max_resource_waiting_time_minutes(queue_in_for_baggage_drop-off,00).
+has_max_resource_waiting_time_seconds(queue_in_for_baggage_drop-off,05).
 		 
 has_min_quota_of_presence(queue_in_for_baggage_drop-off,100).
 		 
-has_max_start_period(queue_in_for_baggage_drop-off,00_001_00_00_00).
+has_max_start_period_years(queue_in_for_baggage_drop-off,00).
+has_max_start_period_days(queue_in_for_baggage_drop-off,001).
+has_max_start_period_hours(queue_in_for_baggage_drop-off,01).
+has_max_start_period_minutes(queue_in_for_baggage_drop-off,00).
+has_max_start_period_seconds(queue_in_for_baggage_drop-off,00).
 		 
 has_start_quantity(queue_in_for_baggage_drop-off,1).
 		 
@@ -169,19 +219,43 @@ has_position(agent_fixes_baggage_stickers,node_x_35_5cm_y_13_5cm_w_3_36cm_h_1_8c
 		 
 has_priority(agent_fixes_baggage_stickers,10).
 		 
-has_execution_time(agent_fixes_baggage_stickers,00_000_00_00_00).
+has_execution_time_years(agent_fixes_baggage_stickers,00).
+has_execution_time_days(agent_fixes_baggage_stickers,000).
+has_execution_time_hours(agent_fixes_baggage_stickers,00).
+has_execution_time_minutes(agent_fixes_baggage_stickers,00).
+has_execution_time_seconds(agent_fixes_baggage_stickers,00).
 		 
-has_waiting_time(agent_fixes_baggage_stickers,00_000_00_00_00).
+has_waiting_time_years(agent_fixes_baggage_stickers,00).
+has_waiting_time_days(agent_fixes_baggage_stickers,000).
+has_waiting_time_hours(agent_fixes_baggage_stickers,00).
+has_waiting_time_minutes(agent_fixes_baggage_stickers,00).
+has_waiting_time_seconds(agent_fixes_baggage_stickers,00).
 		 
-has_resting_time(agent_fixes_baggage_stickers,00_000_00_00_00).
+has_resting_time_years(agent_fixes_baggage_stickers,00).
+has_resting_time_days(agent_fixes_baggage_stickers,000).
+has_resting_time_hours(agent_fixes_baggage_stickers,00).
+has_resting_time_minutes(agent_fixes_baggage_stickers,00).
+has_resting_time_seconds(agent_fixes_baggage_stickers,00).
 		 
-has_transport_time(agent_fixes_baggage_stickers,00_000_00_00_00).
+has_transport_time_years(agent_fixes_baggage_stickers,00).
+has_transport_time_days(agent_fixes_baggage_stickers,000).
+has_transport_time_hours(agent_fixes_baggage_stickers,00).
+has_transport_time_minutes(agent_fixes_baggage_stickers,00).
+has_transport_time_seconds(agent_fixes_baggage_stickers,00).
 		 
-has_max_resource_waiting_time(agent_fixes_baggage_stickers,00_000_00_05_00).
+has_max_resource_waiting_time_years(agent_fixes_baggage_stickers,00).
+has_max_resource_waiting_time_days(agent_fixes_baggage_stickers,000).
+has_max_resource_waiting_time_hours(agent_fixes_baggage_stickers,00).
+has_max_resource_waiting_time_minutes(agent_fixes_baggage_stickers,00).
+has_max_resource_waiting_time_seconds(agent_fixes_baggage_stickers,05).
 		 
 has_min_quota_of_presence(agent_fixes_baggage_stickers,100).
 		 
-has_max_start_period(agent_fixes_baggage_stickers,00_001_00_00_00).
+has_max_start_period_years(agent_fixes_baggage_stickers,00).
+has_max_start_period_days(agent_fixes_baggage_stickers,001).
+has_max_start_period_hours(agent_fixes_baggage_stickers,01).
+has_max_start_period_minutes(agent_fixes_baggage_stickers,00).
+has_max_start_period_seconds(agent_fixes_baggage_stickers,00).
 		 
 has_start_quantity(agent_fixes_baggage_stickers,1).
 		 
@@ -203,19 +277,43 @@ has_position(agent_transfers_baggage_to_conveyor,node_x_41cm_y_13_5cm_w_3_36cm_h
 		 
 has_priority(agent_transfers_baggage_to_conveyor,10).
 		 
-has_execution_time(agent_transfers_baggage_to_conveyor,00_000_00_00_00).
+has_execution_time_years(agent_transfers_baggage_to_conveyor,00).
+has_execution_time_days(agent_transfers_baggage_to_conveyor,000).
+has_execution_time_hours(agent_transfers_baggage_to_conveyor,00).
+has_execution_time_minutes(agent_transfers_baggage_to_conveyor,00).
+has_execution_time_seconds(agent_transfers_baggage_to_conveyor,00).
 		 
-has_waiting_time(agent_transfers_baggage_to_conveyor,00_000_00_00_00).
+has_waiting_time_years(agent_transfers_baggage_to_conveyor,00).
+has_waiting_time_days(agent_transfers_baggage_to_conveyor,000).
+has_waiting_time_hours(agent_transfers_baggage_to_conveyor,00).
+has_waiting_time_minutes(agent_transfers_baggage_to_conveyor,00).
+has_waiting_time_seconds(agent_transfers_baggage_to_conveyor,00).
 		 
-has_resting_time(agent_transfers_baggage_to_conveyor,00_000_00_00_00).
+has_resting_time_years(agent_transfers_baggage_to_conveyor,00).
+has_resting_time_days(agent_transfers_baggage_to_conveyor,000).
+has_resting_time_hours(agent_transfers_baggage_to_conveyor,00).
+has_resting_time_minutes(agent_transfers_baggage_to_conveyor,00).
+has_resting_time_seconds(agent_transfers_baggage_to_conveyor,00).
 		 
-has_transport_time(agent_transfers_baggage_to_conveyor,00_000_00_00_00).
+has_transport_time_years(agent_transfers_baggage_to_conveyor,00).
+has_transport_time_days(agent_transfers_baggage_to_conveyor,000).
+has_transport_time_hours(agent_transfers_baggage_to_conveyor,00).
+has_transport_time_minutes(agent_transfers_baggage_to_conveyor,00).
+has_transport_time_seconds(agent_transfers_baggage_to_conveyor,00).
 		 
-has_max_resource_waiting_time(agent_transfers_baggage_to_conveyor,00_000_00_05_00).
+has_max_resource_waiting_time_years(agent_transfers_baggage_to_conveyor,00).
+has_max_resource_waiting_time_days(agent_transfers_baggage_to_conveyor,000).
+has_max_resource_waiting_time_hours(agent_transfers_baggage_to_conveyor,00).
+has_max_resource_waiting_time_minutes(agent_transfers_baggage_to_conveyor,00).
+has_max_resource_waiting_time_seconds(agent_transfers_baggage_to_conveyor,05).
 		 
 has_min_quota_of_presence(agent_transfers_baggage_to_conveyor,100).
 		 
-has_max_start_period(agent_transfers_baggage_to_conveyor,00_001_00_00_00).
+has_max_start_period_years(agent_transfers_baggage_to_conveyor,00).
+has_max_start_period_days(agent_transfers_baggage_to_conveyor,001).
+has_max_start_period_hours(agent_transfers_baggage_to_conveyor,01).
+has_max_start_period_minutes(agent_transfers_baggage_to_conveyor,00).
+has_max_start_period_seconds(agent_transfers_baggage_to_conveyor,00).
 		 
 has_start_quantity(agent_transfers_baggage_to_conveyor,1).
 		 
@@ -237,19 +335,43 @@ has_position(agent_calculates_extra_price,node_x_35_5cm_y_7_5cm_w_3_36cm_h_1_8cm
 		 
 has_priority(agent_calculates_extra_price,10).
 		 
-has_execution_time(agent_calculates_extra_price,00_000_00_00_00).
+has_execution_time_years(agent_calculates_extra_price,00).
+has_execution_time_days(agent_calculates_extra_price,000).
+has_execution_time_hours(agent_calculates_extra_price,00).
+has_execution_time_minutes(agent_calculates_extra_price,00).
+has_execution_time_seconds(agent_calculates_extra_price,00).
 		 
-has_waiting_time(agent_calculates_extra_price,00_000_00_00_00).
+has_waiting_time_years(agent_calculates_extra_price,00).
+has_waiting_time_days(agent_calculates_extra_price,000).
+has_waiting_time_hours(agent_calculates_extra_price,00).
+has_waiting_time_minutes(agent_calculates_extra_price,00).
+has_waiting_time_seconds(agent_calculates_extra_price,00).
 		 
-has_resting_time(agent_calculates_extra_price,00_000_00_00_00).
+has_resting_time_years(agent_calculates_extra_price,00).
+has_resting_time_days(agent_calculates_extra_price,000).
+has_resting_time_hours(agent_calculates_extra_price,00).
+has_resting_time_minutes(agent_calculates_extra_price,00).
+has_resting_time_seconds(agent_calculates_extra_price,00).
 		 
-has_transport_time(agent_calculates_extra_price,00_000_00_00_00).
+has_transport_time_years(agent_calculates_extra_price,00).
+has_transport_time_days(agent_calculates_extra_price,000).
+has_transport_time_hours(agent_calculates_extra_price,00).
+has_transport_time_minutes(agent_calculates_extra_price,00).
+has_transport_time_seconds(agent_calculates_extra_price,00).
 		 
-has_max_resource_waiting_time(agent_calculates_extra_price,00_000_00_05_00).
+has_max_resource_waiting_time_years(agent_calculates_extra_price,00).
+has_max_resource_waiting_time_days(agent_calculates_extra_price,000).
+has_max_resource_waiting_time_hours(agent_calculates_extra_price,00).
+has_max_resource_waiting_time_minutes(agent_calculates_extra_price,00).
+has_max_resource_waiting_time_seconds(agent_calculates_extra_price,05).
 		 
 has_min_quota_of_presence(agent_calculates_extra_price,100).
 		 
-has_max_start_period(agent_calculates_extra_price,00_001_00_00_00).
+has_max_start_period_years(agent_calculates_extra_price,00).
+has_max_start_period_days(agent_calculates_extra_price,001).
+has_max_start_period_hours(agent_calculates_extra_price,01).
+has_max_start_period_minutes(agent_calculates_extra_price,00).
+has_max_start_period_seconds(agent_calculates_extra_price,00).
 		 
 has_start_quantity(agent_calculates_extra_price,1).
 		 
@@ -311,19 +433,43 @@ has_position(customer_conducts_payment,node_x_50cm_y_7_5cm_w_3_36cm_h_1_8cm_inde
 		 
 has_priority(customer_conducts_payment,10).
 		 
-has_execution_time(customer_conducts_payment,00_000_00_00_00).
+has_execution_time_years(customer_conducts_payment,00).
+has_execution_time_days(customer_conducts_payment,000).
+has_execution_time_hours(customer_conducts_payment,00).
+has_execution_time_minutes(customer_conducts_payment,00).
+has_execution_time_seconds(customer_conducts_payment,00).
 		 
-has_waiting_time(customer_conducts_payment,00_000_00_00_00).
+has_waiting_time_years(customer_conducts_payment,00).
+has_waiting_time_days(customer_conducts_payment,000).
+has_waiting_time_hours(customer_conducts_payment,00).
+has_waiting_time_minutes(customer_conducts_payment,00).
+has_waiting_time_seconds(customer_conducts_payment,00).
 		 
-has_resting_time(customer_conducts_payment,00_000_00_00_00).
+has_resting_time_years(customer_conducts_payment,00).
+has_resting_time_days(customer_conducts_payment,000).
+has_resting_time_hours(customer_conducts_payment,00).
+has_resting_time_minutes(customer_conducts_payment,00).
+has_resting_time_seconds(customer_conducts_payment,00).
 		 
-has_transport_time(customer_conducts_payment,00_000_00_00_00).
+has_transport_time_years(customer_conducts_payment,00).
+has_transport_time_days(customer_conducts_payment,000).
+has_transport_time_hours(customer_conducts_payment,00).
+has_transport_time_minutes(customer_conducts_payment,00).
+has_transport_time_seconds(customer_conducts_payment,00).
 		 
-has_max_resource_waiting_time(customer_conducts_payment,00_000_00_05_00).
+has_max_resource_waiting_time_years(customer_conducts_payment,00).
+has_max_resource_waiting_time_days(customer_conducts_payment,000).
+has_max_resource_waiting_time_hours(customer_conducts_payment,00).
+has_max_resource_waiting_time_minutes(customer_conducts_payment,00).
+has_max_resource_waiting_time_seconds(customer_conducts_payment,05).
 		 
 has_min_quota_of_presence(customer_conducts_payment,100).
 		 
-has_max_start_period(customer_conducts_payment,00_001_00_00_00).
+has_max_start_period_years(customer_conducts_payment,00).
+has_max_start_period_days(customer_conducts_payment,001).
+has_max_start_period_hours(customer_conducts_payment,01).
+has_max_start_period_minutes(customer_conducts_payment,00).
+has_max_start_period_seconds(customer_conducts_payment,00).
 		 
 has_start_quantity(customer_conducts_payment,1).
 		 
@@ -345,19 +491,43 @@ has_position(agent_checks_boarding_pass__id,node_x_26_5cm_y_9_5cm_w_3_36cm_h_1_8
 		 
 has_priority(agent_checks_boarding_pass__id,10).
 		 
-has_execution_time(agent_checks_boarding_pass__id,00_000_00_00_00).
+has_execution_time_years(agent_checks_boarding_pass__id,00).
+has_execution_time_days(agent_checks_boarding_pass__id,000).
+has_execution_time_hours(agent_checks_boarding_pass__id,00).
+has_execution_time_minutes(agent_checks_boarding_pass__id,00).
+has_execution_time_seconds(agent_checks_boarding_pass__id,00).
 		 
-has_waiting_time(agent_checks_boarding_pass__id,00_000_00_00_00).
+has_waiting_time_years(agent_checks_boarding_pass__id,00).
+has_waiting_time_days(agent_checks_boarding_pass__id,000).
+has_waiting_time_hours(agent_checks_boarding_pass__id,00).
+has_waiting_time_minutes(agent_checks_boarding_pass__id,00).
+has_waiting_time_seconds(agent_checks_boarding_pass__id,00).
 		 
-has_resting_time(agent_checks_boarding_pass__id,00_000_00_00_00).
+has_resting_time_years(agent_checks_boarding_pass__id,00).
+has_resting_time_days(agent_checks_boarding_pass__id,000).
+has_resting_time_hours(agent_checks_boarding_pass__id,00).
+has_resting_time_minutes(agent_checks_boarding_pass__id,00).
+has_resting_time_seconds(agent_checks_boarding_pass__id,00).
 		 
-has_transport_time(agent_checks_boarding_pass__id,00_000_00_00_00).
+has_transport_time_years(agent_checks_boarding_pass__id,00).
+has_transport_time_days(agent_checks_boarding_pass__id,000).
+has_transport_time_hours(agent_checks_boarding_pass__id,00).
+has_transport_time_minutes(agent_checks_boarding_pass__id,00).
+has_transport_time_seconds(agent_checks_boarding_pass__id,00).
 		 
-has_max_resource_waiting_time(agent_checks_boarding_pass__id,00_000_00_05_00).
+has_max_resource_waiting_time_years(agent_checks_boarding_pass__id,00).
+has_max_resource_waiting_time_days(agent_checks_boarding_pass__id,000).
+has_max_resource_waiting_time_hours(agent_checks_boarding_pass__id,00).
+has_max_resource_waiting_time_minutes(agent_checks_boarding_pass__id,00).
+has_max_resource_waiting_time_seconds(agent_checks_boarding_pass__id,05).
 		 
 has_min_quota_of_presence(agent_checks_boarding_pass__id,100).
 		 
-has_max_start_period(agent_checks_boarding_pass__id,00_001_00_00_00).
+has_max_start_period_years(agent_checks_boarding_pass__id,00).
+has_max_start_period_days(agent_checks_boarding_pass__id,001).
+has_max_start_period_hours(agent_checks_boarding_pass__id,01).
+has_max_start_period_minutes(agent_checks_boarding_pass__id,00).
+has_max_start_period_seconds(agent_checks_boarding_pass__id,00).
 		 
 has_start_quantity(agent_checks_boarding_pass__id,1).
 		 
@@ -597,11 +767,11 @@ representation_from_to(purchase_of_baggage_possible,check-in_completed_without_e
  *
  */	
 
-subsequent(customer_wants_to_purchase_extra_bag,check-in_completed_without_extra_baggage,_customer_not_willing_to_pay).
+subsequent(customer_wants_to_purchase_extra_bag,check-in_completed_without_extra_baggage_customer_not_willing_to_pay).
 
-denomination_from_to(customer_wants_to_purchase_extra_bag,check-in_completed_without_extra_baggage,_customer_not_willing_to_pay,no).
+denomination_from_to(customer_wants_to_purchase_extra_bag,check-in_completed_without_extra_baggage_customer_not_willing_to_pay,no).
 		 
-representation_from_to(customer_wants_to_purchase_extra_bag,check-in_completed_without_extra_baggage,_customer_not_willing_to_pay,left_right).
+representation_from_to(customer_wants_to_purchase_extra_bag,check-in_completed_without_extra_baggage_customer_not_willing_to_pay,left_right).
 		 
 /**
  *
@@ -642,26 +812,6 @@ show_obj_attr(A):- instance_type(A,Class),
 										write('Position '), write(Position), nl,
 										write('Order '), write(Order), nl.
  
-show_task_all_attr(A):- instance_type(A,Class), 
-										has_type(A,Type),
-										has_position(A,Position),
-										has_order(A,Order),
-										has_execution_time(A,Execution), 
-										has_waiting_time(A,Waiting), 
-										has_resting_time(A,Resting), 
-										has_transport_time(A,Transport),
-										has_max_resource_waiting_time(A,Max_wait),
-										has_max_start_period(A,Max_start),
-										write('Instance '), write(A), nl,
-										write('Class '), write(Class), nl,
-										write('Type '), write(Type), nl,
-										write('Position '), write(Position), nl,
-										write('Order '), write(Order), nl,
-										write('Execution '), write(Execution), nl,
-										write('Waiting '), write(Waiting), nl,
-										write('Transport '), write(Transport), nl,
-										write('Max_start '), write(Max_start), nl,
-										write('Max_wait '), write(Max_wait), nl.
 
 path_exist(A,B):- subsequent(A,B).										
 path_exist(A,B):- subsequent(A,Z), path_exist(Z,B).
@@ -672,7 +822,65 @@ show_path(A,B):- subsequent(A,B),
 show_path(A,B):- subsequent(A,Z), 
 										write('From '), write(A), nl,
 										write('To '), write(Z), nl,
-										show_path(Z,B).			
+										show_path(Z,B).		
+
+show_exec_time_of_task(A):- instance_type(A,task), has_execution_time_years(A,Years), has_execution_time_days(A, Days),
+													has_execution_time_hours(A,Hours), has_execution_time_minutes(A,Minutes),
+													has_execution_time_seconds(A,Seconds),
+													write('Execution Time Years '), write(Years), nl,
+													write('Execution Time Days '), write(Days), nl,
+													write('Execution Time Hours '), write(Hours), nl,
+													write('Execution Time Minutes '), write(Minutes), nl,
+													write('Execution Time Seconds '), write(Seconds), nl.
+
+show_waiting_time_of_task(A):- instance_type(A,task), has_waiting_time_years(A,Years), has_waiting_time_days(A, Days),
+													has_waiting_time_hours(A,Hours), has_waiting_time_minutes(A,Minutes),
+													has_waiting_time_seconds(A,Seconds),
+													write('Waiting Time Years '), write(Years), nl,
+													write('Waiting Time Days '), write(Days), nl,
+													write('Waiting Time Hours '), write(Hours), nl,
+													write('Waiting Time Minutes '), write(Minutes), nl,
+													write('Waiting Time Seconds '), write(Seconds), nl.
+
+show_resting_time_of_task(A):- instance_type(A,task), has_resting_time_years(A,Years), has_resting_time_days(A, Days),
+													has_resting_time_hours(A,Hours), has_resting_time_minutes(A,Minutes),
+													has_resting_time_seconds(A,Seconds),
+													write('resting Time Years '), write(Years), nl,
+													write('resting Time Days '), write(Days), nl,
+													write('resting Time Hours '), write(Hours), nl,
+													write('resting Time Minutes '), write(Minutes), nl,
+													write('resting Time Seconds '), write(Seconds), nl.
+
+show_transport_time_of_task(A):- instance_type(A,task), has_transport_time_years(A,Years), has_transport_time_days(A, Days),
+													has_transport_time_hours(A,Hours), has_transport_time_minutes(A,Minutes),
+													has_transport_time_seconds(A,Seconds),
+													write('transport Time Years '), write(Years), nl,
+													write('transport Time Days '), write(Days), nl,
+													write('transport Time Hours '), write(Hours), nl,
+													write('transport Time Minutes '), write(Minutes), nl,
+													write('transport Time Seconds '), write(Seconds), nl.
+
+show_max_resource_waiting_time_of_task(A):- instance_type(A,task),
+													 has_max_resource_waiting_time_years(A,Years),
+													 has_max_resource_waiting_time_days(A, Days),
+													has_max_resource_waiting_time_hours(A,Hours), has_max_resource_waiting_time_minutes(A,Minutes),
+													has_max_resource_waiting_time_seconds(A,Seconds),
+													write('max_resource_waiting Time Years '), write(Years), nl,
+													write('max_resource_waiting Time Days '), write(Days), nl,
+													write('max_resource_waiting Time Hours '), write(Hours), nl,
+													write('max_resource_waiting Time Minutes '), write(Minutes), nl,
+													write('max_resource_waiting Time Seconds '), write(Seconds), nl.
+
+show_max_start_period_of_task(A):- instance_type(A,task), has_max_start_period_years(A,Years), has_max_start_period_days(A, Days),
+													has_max_start_period_hours(A,Hours), has_max_start_period_minutes(A,Minutes),
+													has_max_start_period_seconds(A,Seconds),
+													write('max_start_period Time Years '), write(Years), nl,
+													write('max_start_period Time Days '), write(Days), nl,
+													write('max_start_period Time Hours '), write(Hours), nl,
+													write('max_start_period Time Minutes '), write(Minutes), nl,
+													write('max_start_period Time Seconds '), write(Seconds), nl.
+
+show_total_exec_time(A,B):- subsequent(A,C), show_total_exec_time(C,B).
 										
 /* show_total_exec_time(A,B):- subsequent(A,B),
 										has_execution_time(A,Execution1),

@@ -9,7 +9,9 @@
 
  
  <xsl:for-each select="ADOXML/MODELS/MODEL/MODELATTRIBUTES">
- 
+
+ :- style_check(-discontiguous).
+
  /**
  *
  * Model Attributes
@@ -73,38 +75,91 @@ has_priority(<xsl:value-of select="concat($instance_name,',', $attrib)"/>).
 		 </xsl:when>
 		 <xsl:otherwise></xsl:otherwise>
 </xsl:choose>
-<xsl:variable name="attrib" select="translate(ATTRIBUTE[@name='Execution time'],':','_')"/>
+
+
+
+
+
+<!-- <xsl:variable name="attrib" select="translate(ATTRIBUTE[@name='Execution time'],':','_')"/> -->
+
+<!-- <xsl:variable name="attrib" select="substring-before(ATTRIBUTE[@name='Execution time'],':')"/> -->
+<xsl:variable name="attrib" select="ATTRIBUTE[@name='Execution time']"/>
+<xsl:variable name="years" select="substring($attrib,1,2)"/>
+<xsl:variable name="days" select="substring($attrib,4,3)"/>
+<xsl:variable name="hours" select="substring($attrib,5,2)"/>
+<xsl:variable name="minutes" select="substring($attrib,8,2)"/>
+<xsl:variable name="seconds" select="substring($attrib,11,2)"/>
 <xsl:choose>
 		 <xsl:when test="$attrib">
-has_execution_time(<xsl:value-of select="concat($instance_name,',', $attrib)"/>).
+has_execution_time_years(<xsl:value-of select="concat($instance_name,',', $years)"/>).
+has_execution_time_days(<xsl:value-of select="concat($instance_name,',', $days)"/>).
+has_execution_time_hours(<xsl:value-of select="concat($instance_name,',', $hours)"/>).
+has_execution_time_minutes(<xsl:value-of select="concat($instance_name,',', $minutes)"/>).
+has_execution_time_seconds(<xsl:value-of select="concat($instance_name,',', $seconds)"/>).
 		 </xsl:when>
 		 <xsl:otherwise></xsl:otherwise>
 </xsl:choose>
 <xsl:variable name="attrib" select="translate(ATTRIBUTE[@name='Waiting time'],':','_')"/>
+<xsl:variable name="years" select="substring($attrib,1,2)"/>
+<xsl:variable name="days" select="substring($attrib,4,3)"/>
+<xsl:variable name="hours" select="substring($attrib,5,2)"/>
+<xsl:variable name="minutes" select="substring($attrib,8,2)"/>
+<xsl:variable name="seconds" select="substring($attrib,11,2)"/>
 <xsl:choose>
 		 <xsl:when test="$attrib">
-has_waiting_time(<xsl:value-of select="concat($instance_name,',', $attrib)"/>).
+has_waiting_time_years(<xsl:value-of select="concat($instance_name,',', $years)"/>).
+has_waiting_time_days(<xsl:value-of select="concat($instance_name,',', $days)"/>).
+has_waiting_time_hours(<xsl:value-of select="concat($instance_name,',', $hours)"/>).
+has_waiting_time_minutes(<xsl:value-of select="concat($instance_name,',', $minutes)"/>).
+has_waiting_time_seconds(<xsl:value-of select="concat($instance_name,',', $seconds)"/>).
 		 </xsl:when>
 		 <xsl:otherwise></xsl:otherwise>
 </xsl:choose>
 <xsl:variable name="attrib" select="translate(ATTRIBUTE[@name='Resting time'],':','_')"/>
+<xsl:variable name="years" select="substring($attrib,1,2)"/>
+<xsl:variable name="days" select="substring($attrib,4,3)"/>
+<xsl:variable name="hours" select="substring($attrib,5,2)"/>
+<xsl:variable name="minutes" select="substring($attrib,8,2)"/>
+<xsl:variable name="seconds" select="substring($attrib,11,2)"/>
 <xsl:choose>
 		 <xsl:when test="$attrib">
-has_resting_time(<xsl:value-of select="concat($instance_name,',', $attrib)"/>).
+has_resting_time_years(<xsl:value-of select="concat($instance_name,',', $years)"/>).
+has_resting_time_days(<xsl:value-of select="concat($instance_name,',', $days)"/>).
+has_resting_time_hours(<xsl:value-of select="concat($instance_name,',', $hours)"/>).
+has_resting_time_minutes(<xsl:value-of select="concat($instance_name,',', $minutes)"/>).
+has_resting_time_seconds(<xsl:value-of select="concat($instance_name,',', $seconds)"/>).
 		 </xsl:when>
 		 <xsl:otherwise></xsl:otherwise>
 </xsl:choose>
 <xsl:variable name="attrib" select="translate(ATTRIBUTE[@name='Transport time'],':','_')"/>
+<xsl:variable name="years" select="substring($attrib,1,2)"/>
+<xsl:variable name="days" select="substring($attrib,4,3)"/>
+<xsl:variable name="hours" select="substring($attrib,5,2)"/>
+<xsl:variable name="minutes" select="substring($attrib,8,2)"/>
+<xsl:variable name="seconds" select="substring($attrib,11,2)"/>
 <xsl:choose>
 		 <xsl:when test="$attrib">
-has_transport_time(<xsl:value-of select="concat($instance_name,',', $attrib)"/>).
+has_transport_time_years(<xsl:value-of select="concat($instance_name,',', $years)"/>).
+has_transport_time_days(<xsl:value-of select="concat($instance_name,',', $days)"/>).
+has_transport_time_hours(<xsl:value-of select="concat($instance_name,',', $hours)"/>).
+has_transport_time_minutes(<xsl:value-of select="concat($instance_name,',', $minutes)"/>).
+has_transport_time_seconds(<xsl:value-of select="concat($instance_name,',', $seconds)"/>).
 		 </xsl:when>
 		 <xsl:otherwise></xsl:otherwise>
 </xsl:choose>
 <xsl:variable name="attrib" select="translate(ATTRIBUTE[@name='Max. resource waiting time'],':','_')"/>
+<xsl:variable name="years" select="substring($attrib,1,2)"/>
+<xsl:variable name="days" select="substring($attrib,4,3)"/>
+<xsl:variable name="hours" select="substring($attrib,5,2)"/>
+<xsl:variable name="minutes" select="substring($attrib,8,2)"/>
+<xsl:variable name="seconds" select="substring($attrib,11,2)"/>
 <xsl:choose>
 		 <xsl:when test="$attrib">
-has_max_resource_waiting_time(<xsl:value-of select="concat($instance_name,',', $attrib)"/>).
+has_max_resource_waiting_time_years(<xsl:value-of select="concat($instance_name,',', $years)"/>).
+has_max_resource_waiting_time_days(<xsl:value-of select="concat($instance_name,',', $days)"/>).
+has_max_resource_waiting_time_hours(<xsl:value-of select="concat($instance_name,',', $hours)"/>).
+has_max_resource_waiting_time_minutes(<xsl:value-of select="concat($instance_name,',', $minutes)"/>).
+has_max_resource_waiting_time_seconds(<xsl:value-of select="concat($instance_name,',', $seconds)"/>).
 		 </xsl:when>
 		 <xsl:otherwise></xsl:otherwise>
 </xsl:choose>
@@ -116,9 +171,18 @@ has_min_quota_of_presence(<xsl:value-of select="concat($instance_name,',', $attr
 		 <xsl:otherwise></xsl:otherwise>
 </xsl:choose>
 <xsl:variable name="attrib" select="translate(ATTRIBUTE[@name='Max. start period'],':','_')"/>
+<xsl:variable name="years" select="substring($attrib,1,2)"/>
+<xsl:variable name="days" select="substring($attrib,4,3)"/>
+<xsl:variable name="hours" select="substring($attrib,5,2)"/>
+<xsl:variable name="minutes" select="substring($attrib,8,2)"/>
+<xsl:variable name="seconds" select="substring($attrib,11,2)"/>
 <xsl:choose>
 		 <xsl:when test="$attrib">
-has_max_start_period(<xsl:value-of select="concat($instance_name,',', $attrib)"/>).
+has_max_start_period_years(<xsl:value-of select="concat($instance_name,',', $years)"/>).
+has_max_start_period_days(<xsl:value-of select="concat($instance_name,',', $days)"/>).
+has_max_start_period_hours(<xsl:value-of select="concat($instance_name,',', $hours)"/>).
+has_max_start_period_minutes(<xsl:value-of select="concat($instance_name,',', $minutes)"/>).
+has_max_start_period_seconds(<xsl:value-of select="concat($instance_name,',', $seconds)"/>).
 		 </xsl:when>
 		 <xsl:otherwise></xsl:otherwise>
 </xsl:choose>
@@ -160,13 +224,17 @@ has_variable_type(<xsl:value-of select="concat($instance_name,',', $attrib)"/>).
 <xsl:variable name="from" select="translate(
 								translate(
 								translate(
+								translate(
+								translate(
 							      	translate(
-							      	FROM/@instance, $uppercase, $smallcase),'&amp;',''),' ','_'),'?','')"/>
+							      	FROM/@instance, $uppercase, $smallcase),'&amp;',''),' ','_'),'?',''),',',''),'__','_')"/>
 <xsl:variable name="to" select="translate(
+								translate(
+								translate(
 								translate(
 									translate(
 							      	translate(
-							      	TO/@instance, $uppercase, $smallcase),'&amp;',''),' ','_'),'?','')"/>
+							      	TO/@instance, $uppercase, $smallcase),'&amp;',''),' ','_'),'?',''),',',''),'__','_')"/>
 subsequent(<xsl:value-of select="concat($from,',', $to)"/>).
 <xsl:variable name="attrib" select="translate(
 							      	ATTRIBUTE[@name='Denomination'], $uppercase, $smallcase)"/>
@@ -205,26 +273,6 @@ show_obj_attr(A):- instance_type(A,Class),
 										write('Position '), write(Position), nl,
 										write('Order '), write(Order), nl.
  
-show_task_all_attr(A):- instance_type(A,Class), 
-										has_type(A,Type),
-										has_position(A,Position),
-										has_order(A,Order),
-										has_execution_time(A,Execution), 
-										has_waiting_time(A,Waiting), 
-										has_resting_time(A,Resting), 
-										has_transport_time(A,Transport),
-										has_max_resource_waiting_time(A,Max_wait),
-										has_max_start_period(A,Max_start),
-										write('Instance '), write(A), nl,
-										write('Class '), write(Class), nl,
-										write('Type '), write(Type), nl,
-										write('Position '), write(Position), nl,
-										write('Order '), write(Order), nl,
-										write('Execution '), write(Execution), nl,
-										write('Waiting '), write(Waiting), nl,
-										write('Transport '), write(Transport), nl,
-										write('Max_start '), write(Max_start), nl,
-										write('Max_wait '), write(Max_wait), nl.
 
 path_exist(A,B):- subsequent(A,B).										
 path_exist(A,B):- subsequent(A,Z), path_exist(Z,B).
@@ -235,7 +283,65 @@ show_path(A,B):- subsequent(A,B),
 show_path(A,B):- subsequent(A,Z), 
 										write('From '), write(A), nl,
 										write('To '), write(Z), nl,
-										show_path(Z,B).			
+										show_path(Z,B).		
+
+show_exec_time_of_task(A):- instance_type(A,task), has_execution_time_years(A,Years), has_execution_time_days(A, Days),
+													has_execution_time_hours(A,Hours), has_execution_time_minutes(A,Minutes),
+													has_execution_time_seconds(A,Seconds),
+													write('Execution Time Years '), write(Years), nl,
+													write('Execution Time Days '), write(Days), nl,
+													write('Execution Time Hours '), write(Hours), nl,
+													write('Execution Time Minutes '), write(Minutes), nl,
+													write('Execution Time Seconds '), write(Seconds), nl.
+
+show_waiting_time_of_task(A):- instance_type(A,task), has_waiting_time_years(A,Years), has_waiting_time_days(A, Days),
+													has_waiting_time_hours(A,Hours), has_waiting_time_minutes(A,Minutes),
+													has_waiting_time_seconds(A,Seconds),
+													write('Waiting Time Years '), write(Years), nl,
+													write('Waiting Time Days '), write(Days), nl,
+													write('Waiting Time Hours '), write(Hours), nl,
+													write('Waiting Time Minutes '), write(Minutes), nl,
+													write('Waiting Time Seconds '), write(Seconds), nl.
+
+show_resting_time_of_task(A):- instance_type(A,task), has_resting_time_years(A,Years), has_resting_time_days(A, Days),
+													has_resting_time_hours(A,Hours), has_resting_time_minutes(A,Minutes),
+													has_resting_time_seconds(A,Seconds),
+													write('resting Time Years '), write(Years), nl,
+													write('resting Time Days '), write(Days), nl,
+													write('resting Time Hours '), write(Hours), nl,
+													write('resting Time Minutes '), write(Minutes), nl,
+													write('resting Time Seconds '), write(Seconds), nl.
+
+show_transport_time_of_task(A):- instance_type(A,task), has_transport_time_years(A,Years), has_transport_time_days(A, Days),
+													has_transport_time_hours(A,Hours), has_transport_time_minutes(A,Minutes),
+													has_transport_time_seconds(A,Seconds),
+													write('transport Time Years '), write(Years), nl,
+													write('transport Time Days '), write(Days), nl,
+													write('transport Time Hours '), write(Hours), nl,
+													write('transport Time Minutes '), write(Minutes), nl,
+													write('transport Time Seconds '), write(Seconds), nl.
+
+show_max_resource_waiting_time_of_task(A):- instance_type(A,task),
+													 has_max_resource_waiting_time_years(A,Years),
+													 has_max_resource_waiting_time_days(A, Days),
+													has_max_resource_waiting_time_hours(A,Hours), has_max_resource_waiting_time_minutes(A,Minutes),
+													has_max_resource_waiting_time_seconds(A,Seconds),
+													write('max_resource_waiting Time Years '), write(Years), nl,
+													write('max_resource_waiting Time Days '), write(Days), nl,
+													write('max_resource_waiting Time Hours '), write(Hours), nl,
+													write('max_resource_waiting Time Minutes '), write(Minutes), nl,
+													write('max_resource_waiting Time Seconds '), write(Seconds), nl.
+
+show_max_start_period_of_task(A):- instance_type(A,task), has_max_start_period_years(A,Years), has_max_start_period_days(A, Days),
+													has_max_start_period_hours(A,Hours), has_max_start_period_minutes(A,Minutes),
+													has_max_start_period_seconds(A,Seconds),
+													write('max_start_period Time Years '), write(Years), nl,
+													write('max_start_period Time Days '), write(Days), nl,
+													write('max_start_period Time Hours '), write(Hours), nl,
+													write('max_start_period Time Minutes '), write(Minutes), nl,
+													write('max_start_period Time Seconds '), write(Seconds), nl.
+
+show_total_exec_time(A,B):- subsequent(A,C), show_total_exec_time(C,B).
 										
 /* show_total_exec_time(A,B):- subsequent(A,B),
 										has_execution_time(A,Execution1),
