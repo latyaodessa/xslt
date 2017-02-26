@@ -333,10 +333,10 @@ show_max_start_period_of_task(A):- instance_type(A,task), has_max_start_period_y
 													write('max_start_period Time Minutes '), write(Minutes), nl,
 													write('max_start_period Time Seconds '), write(Seconds), nl.
 										
-/* show_total_exec_time(A,B):- subsequent(A,B),
-										has_execution_time(A,Execution1),
-										has_execution_time(B,Execution2),
-										Execution = Execution1 + Execution2,
-										write('Total Execution '), write(Execution), nl. */
+show_total_exec_time(A,B):- subsequent(A,B),
+										has_execution_time_years(A,Execution1),
+										has_execution_time_years(B,Execution2),
+										Execution is Execution1 + Execution2,
+										write('Total Execution Time '), write(Execution), nl. 
 </xsl:template>
 </xsl:stylesheet>
