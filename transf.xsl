@@ -255,6 +255,12 @@ representation_from_to(<xsl:value-of select="concat($from,',', $to,',', $attrib)
  *
  */	
  
+ 
+/**
+ * EXAMPLE CALL 
+ * show_obj_attr(extra_baggage_in_addition_to_hand_luggage).
+ */	
+ 
 show_obj_attr(A):- instance_type(A,Class), 
 										has_type(A,Type),
 										has_position(A,Position),
@@ -266,8 +272,19 @@ show_obj_attr(A):- instance_type(A,Class),
 										write('Order '), write(Order), nl.
  
 
+/**
+ * EXAMPLE CALL 
+ * path_exist(check-in_process_airport,extra_baggage_in_addition_to_hand_luggage).
+ */	
+ 
 path_exist(A,B):- subsequent(A,B).										
 path_exist(A,B):- subsequent(A,Z), path_exist(Z,B).
+
+
+/**
+ * EXAMPLE CALL 
+ * show_path(check-in_process_airport,purchase_of_baggage_possible).
+ */
 
 show_path(A,B):- subsequent(A,B),
 										write('From '), write(A), nl,
@@ -277,41 +294,8 @@ show_path(A,B):- subsequent(A,Z),
 										write('To '), write(Z), nl,
 										show_path(Z,B).		
 
-
-/**
- * EXAMPLE CALL 
- * show_total_max_resource_waiting_time(check-in_process_airport,check-in_completed_without_extra_baggage_customer_not_willing_to_pay, 0,0,0,0).
- */	
-
-show_total_max_resource_waiting_time(A,B,S_YEARS,S_DAYS,S_HOURS,S_MINUTES):- (instance_type(A,task) -> 
-															has_max_resource_waiting_time_years(A,E_YEARS) ,
-															has_max_resource_waiting_time_days(A,E_DAYS),
-															has_max_resource_waiting_time_hours(A,E_HOURS),
-															has_max_resource_waiting_time_minutes(A,E_MINUTES),
-															subsequent(A,C),
-															(has_max_resource_waiting_time_years(C,C_E_YEARS) -> 
-																							has_max_resource_waiting_time_days(C,C_E_DAYS),
-																							has_max_resource_waiting_time_hours(C,C_E_HOURS),
-																							has_max_resource_waiting_time_minutes(C,C_E_MINUTES),
-																							Q_YEARS is E_YEARS + C_E_YEARS,
-																							Q_DAYS is E_DAYS + C_E_DAYS,
-																							Q_HOURS is E_HOURS + C_E_HOURS,
-																							Q_MINUTES is E_MINUTES + C_E_MINUTES;
-																							Q_YEARS is S_YEARS,
-																							Q_DAYS is S_DAYS,
-																							Q_HOURS is S_HOURS,
-																							Q_MINUTES is S_MINUTES
-																							),
-															write("Task -> "), write(A),
-															TOTAL_TIME is Q_YEARS*525600 + Q_DAYS*1440 + Q_HOURS*60 + Q_MINUTES ,
-															write(" Total Waiting Time on current path (sec) : "), write(TOTAL_TIME), nl,
-															(C \= B ->
-															show_total_max_resource_waiting_time(C,B,Q_YEARS,Q_DAYS,Q_HOURS,Q_MINUTES)); 
-										subsequent(A,C),
-										(C \= B ->
-										 show_total_max_resource_waiting_time(C,B,S_YEARS,S_YEARS,S_YEARS,S_YEARS))).
-
-
+										
+										
 /**
  * EXAMPLE CALL 
  * show_total_exec_time(check-in_process_airport,conduct_check-in_at_check-in_machine, 0,0,0,0).
@@ -344,8 +328,8 @@ show_total_exec_time(A,B,S_YEARS,S_DAYS,S_HOURS,S_MINUTES):- (instance_type(A,ta
 										subsequent(A,C),
 										(C \= B ->
 										 show_total_exec_time(C,B,S_YEARS,S_YEARS,S_YEARS,S_YEARS))).
-
-
+				
+				
 /**
  * EXAMPLE CALL 
  * show_total_waiting_time(check-in_process_airport,customer_conducts_payment, 0,0,0,0).
@@ -378,6 +362,143 @@ show_total_waiting_time(A,B,S_YEARS,S_DAYS,S_HOURS,S_MINUTES):- (instance_type(A
 										subsequent(A,C),
 										(C \= B ->
 										 show_total_waiting_time(C,B,S_YEARS,S_YEARS,S_YEARS,S_YEARS))).
+
+										
+/**
+ * EXAMPLE CALL 
+ * show_total_resting_time(check-in_process_airport,agent_calculates_extra_price, 0,0,0,0).
+ */	
+
+show_total_resting_time(A,B,S_YEARS,S_DAYS,S_HOURS,S_MINUTES):- (instance_type(A,task) -> 
+															has_resting_time_years(A,E_YEARS) ,
+															has_resting_time_days(A,E_DAYS),
+															has_resting_time_hours(A,E_HOURS),
+															has_resting_time_minutes(A,E_MINUTES),
+															subsequent(A,C),
+															(has_resting_time_years(C,C_E_YEARS) -> 
+																							has_resting_time_days(C,C_E_DAYS),
+																							has_resting_time_hours(C,C_E_HOURS),
+																							has_resting_time_minutes(C,C_E_MINUTES),
+																							Q_YEARS is E_YEARS + C_E_YEARS,
+																							Q_DAYS is E_DAYS + C_E_DAYS,
+																							Q_HOURS is E_HOURS + C_E_HOURS,
+																							Q_MINUTES is E_MINUTES + C_E_MINUTES;
+																							Q_YEARS is S_YEARS,
+																							Q_DAYS is S_DAYS,
+																							Q_HOURS is S_HOURS,
+																							Q_MINUTES is S_MINUTES
+																							),
+															write("Task -> "), write(A),
+															TOTAL_TIME is Q_YEARS*525600 + Q_DAYS*1440 + Q_HOURS*60 + Q_MINUTES ,
+															write(" Total Resting Time on current path (sec) : "), write(TOTAL_TIME), nl,
+															(C \= B ->
+															show_total_resting_time(C,B,Q_YEARS,Q_DAYS,Q_HOURS,Q_MINUTES)); 
+										subsequent(A,C),
+										(C \= B ->
+										 show_total_resting_time(C,B,S_YEARS,S_YEARS,S_YEARS,S_YEARS))).
+										 
+										 
+/**
+ * EXAMPLE CALL 
+ * show_total_transport_time(check-in_process_airport,agent_fixes_baggage_stickers, 0,0,0,0).
+ */	
+
+show_total_transport_time(A,B,S_YEARS,S_DAYS,S_HOURS,S_MINUTES):- (instance_type(A,task) -> 
+															has_transport_time_years(A,E_YEARS) ,
+															has_transport_time_days(A,E_DAYS),
+															has_transport_time_hours(A,E_HOURS),
+															has_transport_time_minutes(A,E_MINUTES),
+															subsequent(A,C),
+															(has_transport_time_years(C,C_E_YEARS) -> 
+																							has_transport_time_days(C,C_E_DAYS),
+																							has_transport_time_hours(C,C_E_HOURS),
+																							has_transport_time_minutes(C,C_E_MINUTES),
+																							Q_YEARS is E_YEARS + C_E_YEARS,
+																							Q_DAYS is E_DAYS + C_E_DAYS,
+																							Q_HOURS is E_HOURS + C_E_HOURS,
+																							Q_MINUTES is E_MINUTES + C_E_MINUTES;
+																							Q_YEARS is S_YEARS,
+																							Q_DAYS is S_DAYS,
+																							Q_HOURS is S_HOURS,
+																							Q_MINUTES is S_MINUTES
+																							),
+															write("Task -> "), write(A),
+															TOTAL_TIME is Q_YEARS*525600 + Q_DAYS*1440 + Q_HOURS*60 + Q_MINUTES ,
+															write(" Total Transport Time on current path (sec) : "), write(TOTAL_TIME), nl,
+															(C \= B ->
+															show_total_transport_time(C,B,Q_YEARS,Q_DAYS,Q_HOURS,Q_MINUTES)); 
+										subsequent(A,C),
+										(C \= B ->
+										 show_total_transport_time(C,B,S_YEARS,S_YEARS,S_YEARS,S_YEARS))).
+										 
+										 
+/**
+ * EXAMPLE CALL 
+ * show_total_max_resource_waiting_time(check-in_process_airport,check-in_completed_without_extra_baggage_customer_not_willing_to_pay, 0,0,0,0).
+ */	
+
+show_total_max_resource_waiting_time(A,B,S_YEARS,S_DAYS,S_HOURS,S_MINUTES):- (instance_type(A,task) -> 
+															has_max_resource_waiting_time_years(A,E_YEARS) ,
+															has_max_resource_waiting_time_days(A,E_DAYS),
+															has_max_resource_waiting_time_hours(A,E_HOURS),
+															has_max_resource_waiting_time_minutes(A,E_MINUTES),
+															subsequent(A,C),
+															(has_max_resource_waiting_time_years(C,C_E_YEARS) -> 
+																							has_max_resource_waiting_time_days(C,C_E_DAYS),
+																							has_max_resource_waiting_time_hours(C,C_E_HOURS),
+																							has_max_resource_waiting_time_minutes(C,C_E_MINUTES),
+																							Q_YEARS is E_YEARS + C_E_YEARS,
+																							Q_DAYS is E_DAYS + C_E_DAYS,
+																							Q_HOURS is E_HOURS + C_E_HOURS,
+																							Q_MINUTES is E_MINUTES + C_E_MINUTES;
+																							Q_YEARS is S_YEARS,
+																							Q_DAYS is S_DAYS,
+																							Q_HOURS is S_HOURS,
+																							Q_MINUTES is S_MINUTES
+																							),
+															write("Task -> "), write(A),
+															TOTAL_TIME is Q_YEARS*525600 + Q_DAYS*1440 + Q_HOURS*60 + Q_MINUTES ,
+															write(" Total Resource Waiting Time on current path (sec) : "), write(TOTAL_TIME), nl,
+															(C \= B ->
+															show_total_max_resource_waiting_time(C,B,Q_YEARS,Q_DAYS,Q_HOURS,Q_MINUTES)); 
+										subsequent(A,C),
+										(C \= B ->
+										 show_total_max_resource_waiting_time(C,B,S_YEARS,S_YEARS,S_YEARS,S_YEARS))).		
+
+
+/**
+ * EXAMPLE CALL 
+ * show_total_max_start_period(check-in_process_airport,check-in_with_baggage_successfully_completed, 0,0,0,0).
+ */	
+
+show_total_max_start_period(A,B,S_YEARS,S_DAYS,S_HOURS,S_MINUTES):- (instance_type(A,task) -> 
+															has_max_start_period_years(A,E_YEARS) ,
+															has_max_start_period_days(A,E_DAYS),
+															has_max_start_period_hours(A,E_HOURS),
+															has_max_start_period_minutes(A,E_MINUTES),
+															subsequent(A,C),
+															(has_max_start_period_years(C,C_E_YEARS) -> 
+																							has_max_start_period_days(C,C_E_DAYS),
+																							has_max_start_period_hours(C,C_E_HOURS),
+																							has_max_start_period_minutes(C,C_E_MINUTES),
+																							Q_YEARS is E_YEARS + C_E_YEARS,
+																							Q_DAYS is E_DAYS + C_E_DAYS,
+																							Q_HOURS is E_HOURS + C_E_HOURS,
+																							Q_MINUTES is E_MINUTES + C_E_MINUTES;
+																							Q_YEARS is S_YEARS,
+																							Q_DAYS is S_DAYS,
+																							Q_HOURS is S_HOURS,
+																							Q_MINUTES is S_MINUTES
+																							),
+															write("Task -> "), write(A),
+															TOTAL_TIME is Q_YEARS*525600 + Q_DAYS*1440 + Q_HOURS*60 + Q_MINUTES ,
+															write(" Total Start Period on current path (sec) : "), write(TOTAL_TIME), nl,
+															(C \= B ->
+															show_total_max_start_period(C,B,Q_YEARS,Q_DAYS,Q_HOURS,Q_MINUTES)); 
+										subsequent(A,C),
+										(C \= B ->
+										 show_total_max_start_period(C,B,S_YEARS,S_YEARS,S_YEARS,S_YEARS))).											 
+
 
 
 show_exec_time_of_task(A):- instance_type(A,task), has_execution_time_years(A,Years), has_execution_time_days(A, Days),
@@ -436,10 +557,5 @@ show_max_start_period_of_task(A):- instance_type(A,task), has_max_start_period_y
 													write('max_start_period Time Minutes '), write(Minutes), nl,
 													write('max_start_period Time Seconds '), write(Seconds), nl.
 										
-show_total_exec_time(A,B):- subsequent(A,B),
-										has_execution_time_years(A,Execution1),
-										has_execution_time_years(B,Execution2),
-										Execution is Execution1 + Execution2,
-										write('Total Execution Time '), write(Execution), nl. 
 </xsl:template>
 </xsl:stylesheet>
