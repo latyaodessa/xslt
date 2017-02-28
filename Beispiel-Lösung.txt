@@ -1,0 +1,20 @@
+make .
+show_bpmn_attr(X).
+show_obj_attr(extra_baggage_in_addition_to_hand_luggage).
+path_exist(check-in_process_airport,extra_baggage_in_addition_to_hand_luggage).
+show_path(check-in_process_airport,purchase_of_baggage_possible).
+show_total_exec_time(check-in_process_airport,conduct_check-in_at_check-in_machine, 0,0,0,0).
+show_total_waiting_time(check-in_process_airport,customer_conducts_payment, 0,0,0,0).
+show_total_resting_time(check-in_process_airport,agent_calculates_extra_price, 0,0,0,0).
+show_total_transport_time(check-in_process_airport,agent_fixes_baggage_stickers, 0,0,0,0).
+show_total_max_resource_waiting_time(check-in_process_airport,check-in_completed_without_extra_baggage_customer_not_willing_to_pay, 0,0,0,0).
+show_total_max_start_period(check-in_process_airport,check-in_with_baggage_successfully_completed, 0,0,0,0).
+show_exec_time_of_task(queue_in_for_baggage_drop-off).
+show_waiting_time_of_task(agent_fixes_baggage_stickers).
+show_resting_time_of_task(agent_calculates_extra_price).
+show_transport_time_of_task(customer_conducts_payment).
+show_max_resource_waiting_time_of_task(agent_checks_boarding_pass__id).
+show_max_start_period_of_task(consult_physician_directly_by_phone).
+
+
+
