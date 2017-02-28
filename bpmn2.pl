@@ -1135,7 +1135,11 @@ show_total_max_start_period(A,B,S_YEARS,S_DAYS,S_HOURS,S_MINUTES):- (instance_ty
 										 show_total_max_start_period(C,B,S_YEARS,S_YEARS,S_YEARS,S_YEARS))).											 
 
 
-
+/**
+ * EXAMPLE CALL 
+ * show_exec_time_of_task(queue_in_for_baggage_drop-off).
+ */	
+										 
 show_exec_time_of_task(A):- instance_type(A,task), has_execution_time_years(A,Years), has_execution_time_days(A, Days),
 													has_execution_time_hours(A,Hours), has_execution_time_minutes(A,Minutes),
 													has_execution_time_seconds(A,Seconds),
@@ -1145,6 +1149,12 @@ show_exec_time_of_task(A):- instance_type(A,task), has_execution_time_years(A,Ye
 													write('Execution Time Minutes '), write(Minutes), nl,
 													write('Execution Time Seconds '), write(Seconds), nl.
 
+													
+/**
+ * EXAMPLE CALL 
+ * show_waiting_time_of_task(agent_fixes_baggage_stickers).
+ */													
+													
 show_waiting_time_of_task(A):- instance_type(A,task), has_waiting_time_years(A,Years), has_waiting_time_days(A, Days),
 													has_waiting_time_hours(A,Hours), has_waiting_time_minutes(A,Minutes),
 													has_waiting_time_seconds(A,Seconds),
@@ -1154,6 +1164,12 @@ show_waiting_time_of_task(A):- instance_type(A,task), has_waiting_time_years(A,Y
 													write('Waiting Time Minutes '), write(Minutes), nl,
 													write('Waiting Time Seconds '), write(Seconds), nl.
 
+
+/**
+ * EXAMPLE CALL 
+ * show_resting_time_of_task(agent_calculates_extra_price).
+ */													
+													
 show_resting_time_of_task(A):- instance_type(A,task), has_resting_time_years(A,Years), has_resting_time_days(A, Days),
 													has_resting_time_hours(A,Hours), has_resting_time_minutes(A,Minutes),
 													has_resting_time_seconds(A,Seconds),
@@ -1163,6 +1179,12 @@ show_resting_time_of_task(A):- instance_type(A,task), has_resting_time_years(A,Y
 													write('resting Time Minutes '), write(Minutes), nl,
 													write('resting Time Seconds '), write(Seconds), nl.
 
+													
+/**
+ * EXAMPLE CALL 
+ * show_transport_time_of_task(customer_conducts_payment).
+ */														
+													
 show_transport_time_of_task(A):- instance_type(A,task), has_transport_time_years(A,Years), has_transport_time_days(A, Days),
 													has_transport_time_hours(A,Hours), has_transport_time_minutes(A,Minutes),
 													has_transport_time_seconds(A,Seconds),
@@ -1172,6 +1194,12 @@ show_transport_time_of_task(A):- instance_type(A,task), has_transport_time_years
 													write('transport Time Minutes '), write(Minutes), nl,
 													write('transport Time Seconds '), write(Seconds), nl.
 
+													
+/**
+ * EXAMPLE CALL 
+ * show_max_resource_waiting_time_of_task(agent_checks_boarding_pass__id).
+ */													
+													
 show_max_resource_waiting_time_of_task(A):- instance_type(A,task),
 													 has_max_resource_waiting_time_years(A,Years),
 													 has_max_resource_waiting_time_days(A, Days),
@@ -1183,6 +1211,12 @@ show_max_resource_waiting_time_of_task(A):- instance_type(A,task),
 													write('max_resource_waiting Time Minutes '), write(Minutes), nl,
 													write('max_resource_waiting Time Seconds '), write(Seconds), nl.
 
+													
+/**
+ * EXAMPLE CALL 
+ * show_max_start_period_of_task(consult_physician_directly_by_phone).
+ */													
+													
 show_max_start_period_of_task(A):- instance_type(A,task), has_max_start_period_years(A,Years), has_max_start_period_days(A, Days),
 													has_max_start_period_hours(A,Hours), has_max_start_period_minutes(A,Minutes),
 													has_max_start_period_seconds(A,Seconds),
