@@ -17,11 +17,39 @@
  * Model Attributes
  *
  */
+
+<xsl:variable name="base_name" select="
+									translate(
+									translate(
+							      	translate(
+							      	ATTRIBUTE[@name='Base name'], $uppercase, $smallcase),'&amp;',''),' ','_')"/>
  
- <xsl:variable name="attrib" select="ATTRIBUTE[@name='Number of objects and relations']"/>
+
+ <xsl:variable name="attrib" select="translate(
+							      	ATTRIBUTE[@name='Author'], $uppercase, $smallcase)"/>
 <xsl:choose>
 		 <xsl:when test="$attrib">
-has_total_count_objects(<xsl:value-of select="$attrib"/>).
+has_author(<xsl:value-of select="concat($base_name,',', $attrib)"/>).
+		 </xsl:when>
+		 <xsl:otherwise></xsl:otherwise>
+</xsl:choose>
+<xsl:variable name="attrib" select="ATTRIBUTE[@name='Number of objects and relations']"/>
+<xsl:choose>
+		 <xsl:when test="$attrib">
+has_total_count_objects(<xsl:value-of select="concat($base_name,',', $attrib)"/>).
+		 </xsl:when>
+		 <xsl:otherwise></xsl:otherwise>
+</xsl:choose>
+<xsl:variable name="attrib" select="translate(
+									translate(
+							      	translate(
+									translate(
+									translate(
+									translate(
+							      	ATTRIBUTE[@name='Type'], $uppercase, $smallcase),' ','_'),':','_'),'.','_'),'(','_'),')','_')"/>
+<xsl:choose>
+		 <xsl:when test="$attrib">
+has_type(<xsl:value-of select="concat($base_name,',', $attrib)"/>).
 		 </xsl:when>
 		 <xsl:otherwise></xsl:otherwise>
 </xsl:choose>
@@ -254,6 +282,20 @@ representation_from_to(<xsl:value-of select="concat($from,',', $to,',', $attrib)
  * RULES
  *
  */	
+ 
+
+/**
+ * EXAMPLE CALL 
+ * show_bpmn_attr(X).
+ */	
+ 
+show_bpmn_attr(X):- has_author(X,Author), 
+										has_type(X,Type),
+										has_total_count_objects(X,Count),
+										write('Model '), write(X), nl,
+										write('Type '), write(Type), nl,
+										write('Author '), write(Author), nl,
+										write('Objects Count '), write(Count), nl.
  
  
 /**

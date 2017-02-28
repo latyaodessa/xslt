@@ -7,9 +7,13 @@
  * Model Attributes
  *
  */
- 
- 
-has_total_count_objects(35).
+
+
+has_author(sample_bpmn_process_1,admin).
+		 
+has_total_count_objects(sample_bpmn_process_1,35).
+		 
+has_type(sample_bpmn_process_1,business_process_diagram__bpmn_2_0_).
 		 
  
  /**
@@ -802,6 +806,26 @@ representation_from_to(online_check-in_already_completed,extra_baggage_in_additi
  *
  */	
  
+
+/**
+ * EXAMPLE CALL 
+ * show_bpmn_attr(X).
+ */	
+ 
+show_bpmn_attr(X):- has_author(X,Author), 
+										has_type(X,Type),
+										has_total_count_objects(X,Count),
+										write('Model '), write(X), nl,
+										write('Type '), write(Type), nl,
+										write('Author '), write(Author), nl,
+										write('Objects Count '), write(Count), nl.
+ 
+ 
+/**
+ * EXAMPLE CALL 
+ * show_obj_attr(extra_baggage_in_addition_to_hand_luggage).
+ */	
+ 
 show_obj_attr(A):- instance_type(A,Class), 
 										has_type(A,Type),
 										has_position(A,Position),
@@ -813,8 +837,19 @@ show_obj_attr(A):- instance_type(A,Class),
 										write('Order '), write(Order), nl.
  
 
+/**
+ * EXAMPLE CALL 
+ * path_exist(check-in_process_airport,extra_baggage_in_addition_to_hand_luggage).
+ */	
+ 
 path_exist(A,B):- subsequent(A,B).										
 path_exist(A,B):- subsequent(A,Z), path_exist(Z,B).
+
+
+/**
+ * EXAMPLE CALL 
+ * show_path(check-in_process_airport,purchase_of_baggage_possible).
+ */
 
 show_path(A,B):- subsequent(A,B),
 										write('From '), write(A), nl,
@@ -896,7 +931,7 @@ show_total_waiting_time(A,B,S_YEARS,S_DAYS,S_HOURS,S_MINUTES):- (instance_type(A
 										
 /**
  * EXAMPLE CALL 
- * show_total_resting_time(check-in_process_airport,customer_conducts_payment, 0,0,0,0).
+ * show_total_resting_time(check-in_process_airport,agent_calculates_extra_price, 0,0,0,0).
  */	
 
 show_total_resting_time(A,B,S_YEARS,S_DAYS,S_HOURS,S_MINUTES):- (instance_type(A,task) -> 
@@ -930,7 +965,7 @@ show_total_resting_time(A,B,S_YEARS,S_DAYS,S_HOURS,S_MINUTES):- (instance_type(A
 										 
 /**
  * EXAMPLE CALL 
- * show_total_transport_time(check-in_process_airport,customer_conducts_payment, 0,0,0,0).
+ * show_total_transport_time(check-in_process_airport,agent_fixes_baggage_stickers, 0,0,0,0).
  */	
 
 show_total_transport_time(A,B,S_YEARS,S_DAYS,S_HOURS,S_MINUTES):- (instance_type(A,task) -> 
@@ -998,7 +1033,7 @@ show_total_max_resource_waiting_time(A,B,S_YEARS,S_DAYS,S_HOURS,S_MINUTES):- (in
 
 /**
  * EXAMPLE CALL 
- * show_total_max_start_period(check-in_process_airport,check-in_completed_without_extra_baggage_customer_not_willing_to_pay, 0,0,0,0).
+ * show_total_max_start_period(check-in_process_airport,check-in_with_baggage_successfully_completed, 0,0,0,0).
  */	
 
 show_total_max_start_period(A,B,S_YEARS,S_DAYS,S_HOURS,S_MINUTES):- (instance_type(A,task) -> 
